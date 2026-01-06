@@ -118,7 +118,7 @@ export default function HomePage() {
 
             {/* Outline Button */}
             <Link href="/contact">
-              <button className="border border-white hover:bg-white hover:text-[#002249] text-white py-3 px-8 rounded-md transition-colors">
+              <button className="border border-white hover:bg-white hover:text-[#002249] text-white py-3 px-13 rounded-md transition-colors">
                 Contact Us
               </button>
             </Link>

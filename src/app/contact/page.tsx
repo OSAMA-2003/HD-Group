@@ -191,7 +191,7 @@ export default function ContactPage() {
               </div>
 
               {/* Phone & Country Row */}
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 
                 {/* Phone Number */}
                 <div>

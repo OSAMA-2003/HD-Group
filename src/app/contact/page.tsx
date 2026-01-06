@@ -140,7 +140,7 @@ export default function ContactPage() {
           </div>
 
           {/* RIGHT COLUMN: Form */}
-          <div className="bg-white rounded-3xl p-8 border border-yellow-400 shadow-sm">
+          <div className="bg-white rounded-3xl p-8 border border-yellow-400 shadow-sm overflow-hidden ">
             <h2 className="text-2xl font-bold main-blue mb-8">Send Us a Message</h2>
             
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">

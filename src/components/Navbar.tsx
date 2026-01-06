@@ -47,8 +47,8 @@ export default function Navbar() {
 
   // Close language dropdown when clicking outside
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (langMenuRef.current && !langMenuRef.current.contains(event.target)) {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (langMenuRef.current && !(langMenuRef.current as HTMLElement).contains(event.target as Node)) {
         setIsLangMenuOpen(false);
       }
     };
@@ -56,7 +56,7 @@ export default function Navbar() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const handleLangSelect = (lang) => {
+  const handleLangSelect = (lang: { code: string; name: string; flag: string }) => {
     setSelectedLang(lang);
     setIsLangMenuOpen(false);
   };

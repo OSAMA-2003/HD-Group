@@ -207,7 +207,7 @@ export default function ContactPage() {
                         international
                         defaultCountry="EG"
                         placeholder="Enter phone number"
-                        className={`flex h-[50px] w-full rounded-lg border bg-white px-3 py-2 text-sm ring-offset-white placeholder:text-gray-500 focus-within:ring-2 focus-within:ring-[#d4af37] focus-within:border-transparent ${
+                        className={`flex h-[50px] max-w-full rounded-lg border bg-white px-3 py-2 text-sm ring-offset-white placeholder:text-gray-500 focus-within:ring-2 focus-within:ring-[#d4af37] focus-within:border-transparent ${
                           errors.phoneNumber ? "border-red-500" : "border-gray-200"
                         }`}
                       />
@@ -223,7 +223,7 @@ export default function ContactPage() {
                   </label>
                   <select 
                     {...register("country")}
-                    className={`w-full px-4 py-3 h-[50px] rounded-lg border bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all ${
+                    className={`max-w-full px-4 py-3 h-[50px] rounded-lg border bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all ${
                       errors.country ? "border-red-500" : "border-gray-200"
                     }`}
                   >

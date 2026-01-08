@@ -87,15 +87,21 @@ export default function HomePage() {
       {/* --- HERO SECTION --- */}
       <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
 
-        {/* Background Image with Overlay */}
+        {/* Background Video with Overlay */}
         <div className="absolute inset-0 z-0">
-          {/* Using a placeholder image of a port/ship to match your design */}
-          <img
-            src="/images/home.png"
-            alt="Global Shipping Background"
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
             className="w-full h-full object-cover"
-          />
-          {/* Blue/Dark Overlay to make text readable */}
+          >
+            {/* Replace with your actual video path */}
+            <source src="/images/Home2.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          
+          {/* Blue Overlay */}
           <div className="absolute inset-0 bg-[#0a1f44] opacity-80"></div>
         </div>
 

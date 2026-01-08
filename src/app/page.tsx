@@ -112,7 +112,7 @@ export default function HomePage() {
           </p>
 
           <h1 className="text-2xl md:text-3xl lg:text-3xl font-bold text-white leading-tight mb-8">
-            Lorem ipsum id eget eu quis magna nunc diam nisl netus netus malesuada diam pellentesque suspendisse neque nisl eget nisi.          </h1>
+            HD GROUP for Export is an Egyptian export company providing a diverse range of high-quality products         </h1>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             {/* Gold Button */}

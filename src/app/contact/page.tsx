@@ -4,22 +4,41 @@ import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
-// 1. Import country helpers
-import { getCountries, getCountryCallingCode } from "react-phone-number-input/input";
-import en from "react-phone-number-input/locale/en"; // English country names
+import { getCountries } from "react-phone-number-input/input";
+import en from "react-phone-number-input/locale/en";
 import "react-phone-number-input/style.css"; 
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
 import { useState } from "react";
+// 1. Import Framer Motion
+import { motion } from 'framer-motion';
+
+// --- Animation Variants (Consistent with other pages) ---
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { 
+    opacity: 1, 
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" as const }
+  }
+};
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.1
+    }
+  }
+};
 
 // --- Zod Schema ---
 const contactSchema = z.object({
   fullName: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Please enter a valid email address"),
   companyName: z.string().optional(),
-  
-  // Validates phone number format based on the selected country code
   phoneNumber: z.string().refine(isValidPhoneNumber, { message: "Invalid phone number" }),
-  
   country: z.string().min(1, "Please select a country"),
   productInterest: z.string().optional(),
   message: z.string().min(10, "Message must be at least 10 characters"),
@@ -56,7 +75,8 @@ export default function ContactPage() {
     <div className="min-h-screen bg-gray-50 main-blue">
       
       {/* Header Section */}
-      <div className="bg-white py-8 px-4 text-center shadow-sm border-b border-gray-100">
+      <div 
+        className="bg-white py-8 px-4 text-center shadow-sm border-b border-gray-100">
         <h1 className="text-4xl main-blue mb-4 font-bold">
           Let's Connect With <span className="text-[#d4af37]">HD Group</span>
         </h1>
@@ -66,12 +86,18 @@ export default function ContactPage() {
         </p>
       </div>
 
-      <div className="max-w-screen mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-[24px] items-start">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-[24px] items-start">
           
           {/* LEFT COLUMN: Contact Info */}
-          <div className="space-y-8">
-            <div className='bg-white rounded-2xl p-5 shadow-sm border border-gray-100'>
+          <motion.div 
+            className="space-y-8"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            variants={staggerContainer}
+          >
+            <motion.div variants={fadeInUp} className='bg-white rounded-2xl p-5 shadow-sm border border-gray-100'>
               <span className="text-[#d4af37] tracking-wide uppercase text-sm font-bold">Get In Touch</span>
               <h2 className="text-2xl font-bold main-blue mt-2 mb-4">
                 Seamless Communication, Global Impact.
@@ -80,9 +106,9 @@ export default function ContactPage() {
                 We are always here to help you grow your business with premium Egyptian exports.
               </p>
 
-              <div className="grid gap-8">
+              <motion.div className="grid gap-8" variants={staggerContainer}>
                 {/* Email */}
-                <div className="flex gap-4">
+                <motion.div variants={fadeInUp} className="flex gap-4">
                   <div className="w-10 h-10 bg-[#d4af37] rounded-full flex items-center justify-center flex-shrink-0">
                     <Mail className="w-4 h-4 text-white" />
                   </div>
@@ -91,10 +117,10 @@ export default function ContactPage() {
                     <p className="text-slate-600">info@hdgroup-export.com</p>
                     <p className="text-slate-600">sales@hdgroup-export.com</p>
                   </div>
-                </div>
+                </motion.div>
 
                 {/* Phone */}
-                <div className="flex gap-4">
+                <motion.div variants={fadeInUp} className="flex gap-4">
                   <div className="w-10 h-10 bg-[#d4af37] rounded-full flex items-center justify-center flex-shrink-0">
                     <Phone className="w-4 h-4 text-white" />
                   </div>
@@ -102,10 +128,10 @@ export default function ContactPage() {
                     <h3 className="main-blue text-lg font-semibold">Phone</h3>
                     <p className="text-slate-600">+20 153 0401 020</p>
                   </div>
-                </div>
+                </motion.div>
 
                 {/* Location */}
-                <div className="flex gap-4">
+                <motion.div variants={fadeInUp} className="flex gap-4">
                   <div className="w-10 h-10 bg-[#d4af37] rounded-full flex items-center justify-center flex-shrink-0">
                     <MapPin className="w-4 h-4 text-white" />
                   </div>
@@ -115,10 +141,10 @@ export default function ContactPage() {
                       Cairo, Egypt - Export City Center.
                     </p>
                   </div>
-                </div>
+                </motion.div>
 
                 {/* Working Hours */}
-                <div className="flex gap-4">
+                <motion.div variants={fadeInUp} className="flex gap-4">
                   <div className="w-10 h-10 bg-[#d4af37] rounded-full flex items-center justify-center flex-shrink-0">
                     <Clock className="w-4 h-4 text-white" />
                   </div>
@@ -127,20 +153,26 @@ export default function ContactPage() {
                     <p className="text-slate-600">Saturday - Thursday</p>
                     <p className="text-slate-600">08:00 am - 08:00 pm</p>
                   </div>
-                </div>
-              </div>
-            </div>
+                </motion.div>
+              </motion.div>
+            </motion.div>
 
-            <div className="bg-[#FFF9E3] p-6 rounded-2xl border border-yellow-100">
+            <motion.div variants={fadeInUp} className="bg-[#FFF9E3] p-6 rounded-2xl border border-yellow-100">
               <h3 className="main-blue text-lg mb-2 font-bold">Quick Response</h3>
               <p className="text-slate-600 text-sm leading-relaxed">
                 Our export team typically responds to inquiries within 24 business hours. 
               </p>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
           {/* RIGHT COLUMN: Form */}
-          <div className="bg-white rounded-3xl p-8 border border-yellow-400 shadow-sm overflow-hidden ">
+          <motion.div 
+            className="bg-white rounded-3xl p-8 border border-yellow-400 shadow-sm"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            variants={fadeInUp} // Animates the whole form block at once for better UX
+          >
             <h2 className="text-2xl font-bold main-blue mb-8">Send Us a Message</h2>
             
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
@@ -216,22 +248,21 @@ export default function ContactPage() {
                   {errors.phoneNumber && <p className="text-red-500 text-sm mt-1">{errors.phoneNumber.message}</p>}
                 </div>
 
-                {/* Country Dropdown (Dynamic) */}
+                {/* Country Dropdown */}
                 <div>
                   <label className="block text-sm font-medium main-blue mb-2">
                     Country <span className="text-red-500">*</span>
                   </label>
                   <select 
                     {...register("country")}
-                    className={`max-w-full px-4 py-3 h-[50px] rounded-lg border bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all ${
+                    className={`w-full px-4 py-3 h-[50px] rounded-lg border bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all ${
                       errors.country ? "border-red-500" : "border-gray-200"
                     }`}
                   >
                     <option value="">Select Your Country</option>
-                    {/* 2. Dynamically map all countries */}
                     {getCountries().map((country) => (
                       <option key={country} value={country}>
-                        {en[country]} {/* Displays "Egypt", "United States", etc. */}
+                        {en[country]}
                       </option>
                     ))}
                   </select>
@@ -286,7 +317,7 @@ export default function ContactPage() {
               </button>
 
             </form>
-          </div>
+          </motion.div>
 
         </div>
       </div>

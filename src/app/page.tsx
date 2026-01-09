@@ -111,7 +111,7 @@ export default function HomePage() {
 
     {/* Fallback for very old browsers */}
     <img
-      src="/images/home.jpg"
+      src="/images/home-v.webp"
       alt="Background"
       className="w-full h-full object-cover"
     />

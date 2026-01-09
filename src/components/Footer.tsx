@@ -52,7 +52,7 @@ function Footer() {
               />
             </Link>
             
-            <p className="text-slate-300 text-sm leading-relaxed max-w-xs">
+            <p className="text-slate-300 text-center text-sm leading-relaxed max-w-xs">
               Leading Egyptian export company specializing in fresh produce and medical supplies to global markets.
             </p>
 

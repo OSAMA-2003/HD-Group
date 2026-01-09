@@ -105,8 +105,9 @@ export default function HomePage() {
     poster="/images/home.jpg"
     className="w-full h-full object-cover"
   >
-    <source src="/images/home.mp4" type="video/mp4" />
+    
     <source src="/images/home.webm" type="video/webm" />
+    <source src="/images/home.mp4" type="video/mp4" />
 
     {/* Fallback for very old browsers */}
     <img

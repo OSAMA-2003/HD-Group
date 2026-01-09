@@ -1,0 +1,44 @@
+{
+  "home": {
+    "chooseUs": "Pourquoi choisir",
+    "contact": "Contactez-nous",
+    "dryGoods": {
+      "description": "Des épices aromatiques et authentiques provenant directement des fermes égyptiennes jusqu'à votre cuisine.",
+      "title": "Légumes & Produits secs"
+    },
+    "exploreProducts": "Voir le produit",
+    "featureFour": {
+      "description": "Des années d'expérience en exportation avec un bilan éprouvé.",
+      "title": "Partenaire de confiance"
+    },
+    "featureOne": {
+      "description": "Tous les produits répondent aux certifications et normes de qualité internationales.",
+      "title": "Normes de haute qualité"
+    },
+    "featureThree": {
+      "description": "Chaîne d'approvisionnement efficace garantissant une livraison ponctuelle dans le monde entier.",
+      "title": "Logistique Fiable"
+    },
+    "featureTwo": {
+      "description": "Exportation vers les marchés à travers l'Europe, l'Asie, le Moyen-Orient et l'Afrique.",
+      "title": "Portée mondiale"
+    },
+    "fruits": {
+      "description": "Fruits de qualité premium sélectionnés pour leur douceur et leur valeur nutritionnelle pour l'exportation mondiale.",
+      "title": "Fruits frais"
+    },
+    "hero": "HD GROUP for Export est une entreprise d'exportation égyptienne fournissant une gamme diversifiée de produits de haute qualité\n",
+    "medical": {
+      "description": "Équipement médical et fournitures certifiés répondant à des normes de sécurité internationales rigoureuses.",
+      "title": "Fournitures médicales"
+    },
+    "products": "Nos catégories de produits",
+    "productsText": "Découvrez notre gamme de produits d'exportation, soigneusement sélectionnés et préparés pour les marchés mondiaux",
+    "vegetables": {
+      "description": "Des légumes frais de la ferme récoltés à maturité optimale et livrés sur les marchés internationaux.",
+      "title": "Légumes frais"
+    },
+    "welcome": "Bienvenue à",
+    "welcomeText": "est une entreprise d'exportation égyptienne de premier plan avec des années d'expérience dans la livraison de fruits frais, de légumes et de fournitures médicales de qualité supérieure sur les marchés internationaux. Nous sommes fiers de notre qualité, de notre fiabilité et de la satisfaction de nos clients.\nNotre engagement envers l'excellence et un contrôle qualité strict garantissent que chaque expédition respecte les normes internationales les plus élevées. Partenaire avec nous pour une expérience d'exportation sans faille."
+  }
+}

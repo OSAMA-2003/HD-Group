@@ -1,0 +1,44 @@
+{
+  "home": {
+    "chooseUs": "为什么选择",
+    "contact": "联系我们",
+    "dryGoods": {
+      "description": "直接从埃及农场采购的芳香和正宗香料，送到您的厨房。",
+      "title": "豆类和干货"
+    },
+    "exploreProducts": "查看产品",
+    "featureFour": {
+      "description": "多年的出口经验，拥有良好的业绩记录。",
+      "title": "可信赖的合作伙伴"
+    },
+    "featureOne": {
+      "description": "所有产品均符合国际质量认证和标准。",
+      "title": "高质量标准"
+    },
+    "featureThree": {
+      "description": "高效的供应链确保全球及时交付。",
+      "title": "可靠的物流"
+    },
+    "featureTwo": {
+      "description": "向欧洲、亚洲、中东和非洲的市场出口。",
+      "title": "全球覆盖"
+    },
+    "fruits": {
+      "description": "为全球出口精选的优质水果，以其甜美和营养价值而闻名。",
+      "title": "新鲜水果"
+    },
+    "hero": "HD GROUP for Export 是一家埃及出口公司，提供多种高质量产品\n",
+    "medical": {
+      "description": "符合严格国际安全标准的认证医疗设备和用品。",
+      "title": "医疗用品"
+    },
+    "products": "我们的产品类别",
+    "productsText": "发现我们的出口产品系列，经过精心挑选和准备，面向全球市场",
+    "vegetables": {
+      "description": "在最佳成熟期收获的农场新鲜蔬菜，送往国际市场。",
+      "title": "新鲜蔬菜"
+    },
+    "welcome": "欢迎来到",
+    "welcomeText": "是一家领先的埃及出口公司，拥有多年向国际市场提供优质新鲜水果、蔬菜和医疗用品的经验。我们以质量、可靠性和客户满意度为荣。\n我们对卓越的承诺和严格的质量控制确保每一批货物都符合最高的国际标准。与我们合作，享受无缝的出口体验。"
+  }
+}

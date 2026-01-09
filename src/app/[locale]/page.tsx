@@ -2,14 +2,13 @@
 import Link from 'next/link';
 import React from 'react';
 import { ArrowRight, ShieldCheck, Globe, Truck, Handshake } from 'lucide-react';
-// 1. Import Framer Motion
 import { motion } from 'framer-motion';
 import Button from '@/components/UI/Button';
+import { useTranslations } from 'next-intl';
 
-// --- Animation Variants Configuration ---
-// These are defined outside the component to prevent re-creation on every render (Performance Boost)
 
-// 1. Simple Fade Up (for text and single elements)
+  
+
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
   visible: { 
@@ -34,59 +33,71 @@ const staggerContainer = {
 
 export default function HomePage() {
 
+  const t = useTranslations('home');
+
+
   const products = [
-    {
-      id: 1,
-      title: "Fresh Fruits",
-      link: "/products/fruits",
-      description: "Premium quality fruits selected for their sweetness and nutritional value for global export.",
-      image: "/products/fruites/ALL .webp"
-    },
-    {
-      id: 2,
-      title: "Fresh Vegetables",
-      link: "/products/vegetables",
-      description: "Farm-fresh vegetables harvested at peak ripeness and delivered to international markets.",
-      image: "/products/veg/ALL VEGE.webp"
-    },
-    {
-      id: 3,
-      title: "Medical Supplies",
-      link: "/products/medical",
-      description: "Certified medical equipment and supplies meeting rigorous international safety standards.",
-      image: "/images/products-home.webp"
-    },
-    {
-      id: 4,
-      title: "Legumes & Dry Goods",
-      link: "/products/dry-goods",
-      description: "Aromatic and authentic spices sourced directly from Egyptian farms to your kitchen.",
-      image: "/images/products-home.webp"
-    },
-  ];
+  {
+    id: 1,
+    title: t('fruits.title'),
+    description: t('fruits.description'),
+    link: "/products/fruits",
+    image: "/products/fruites/ALL .webp"
+  },
+  {
+    id: 2,
+    title: t('vegetables.title'),
+    description: t('vegetables.description'),
+    link: "/products/vegetables",
+    image: "/products/veg/ALL VEGE.webp"
+  },
+  {
+    id: 3,
+    title: t('medical.title'),
+    description: t('medical.description'),
+    link: "/products/medical",
+    image: "/images/products-home.webp"
+  },
+  {
+    id: 4,
+    title: t('dryGoods.title'),
+    description: t('dryGoods.description'),
+    link: "/products/dry-goods",
+    image: "/images/products-home.webp"
+  }
+];
+
+      
+
+  
+
+
 
   const features = [
     {
-      title: "High Quality Standards",
-      description: "All products meet international quality certifications and standards.",
+      title: t('featureOne.title'),
+      description: t('featureOne.description'),
       icon: <ShieldCheck size={32} className="text-white" />
     },
     {
-      title: "Global Reach",
-      description: "Exporting to markets across Europe, Asia, Middle East, and Africa.",
+      title: t('featureTwo.title'),
+      description: t('featureTwo.description'),
       icon: <Globe size={32} className="text-white" />
     },
     {
-      title: "Reliable Logistics",
-      description: "Efficient supply chain ensuring timely delivery worldwide.",
+      title: t('featureThree.title'),
+      description: t('featureThree.description'),
       icon: <Truck size={32} className="text-white" />
     },
     {
-      title: "Trusted Partner",
-      description: "Years of export experience with a proven track record.",
+      title: t('featureFour.title'),
+      description: t('featureFour.description'),
       icon: <Handshake size={32} className="text-white" />
     }
   ];
+
+
+
 
   return (
     <main>
@@ -135,18 +146,22 @@ export default function HomePage() {
             </motion.p>
 
             <motion.h1 variants={fadeInUp} className="text-2xl md:text-3xl lg:text-3xl font-bold text-white leading-tight mb-8">
-              HD GROUP for Export is an Egyptian export company providing a diverse range of high-quality products
+              {t('hero')}
             </motion.h1>
 
             <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <button className="bg-yellow-400 hover:bg-yellow-500 main-blue py-3 px-8 rounded-md transition-colors flex items-center gap-2">
-                View Product
+              
+
+              <Link href='/products/fruits' >
+                <button className="bg-yellow-400 hover:bg-yellow-500 main-blue py-3 px-8 rounded-md transition-colors flex items-center gap-2">
+                {t('exploreProducts')}
                 <ArrowRight />
               </button>
+              </Link>
 
               <Link href="/contact">
                 <button className="border border-white hover:bg-white hover:text-[#002249] text-white py-3 px-13 rounded-md transition-colors">
-                  Contact Us
+                  {t('contact')}
                 </button>
               </Link>
             </motion.div>
@@ -164,12 +179,12 @@ export default function HomePage() {
           variants={fadeInUp}
         >
           <h2 className="text-3xl md:text-4xl mb-8 main-blue">
-            Welcome to <span className="secondary-yellow">HD GROUP</span>
+           {t('welcome')}  <span className="secondary-yellow">HD GROUP</span>
           </h2>
 
           <p className="text-gray-700 leading-relaxed text-sm md:text-base">
-            <span className=" secondary-yellow">HD GROUP</span> HD GROUP is a leading Egyptian export company with years of experience in delivering premium fresh fruits, vegetables, and medical supplies to international markets. We pride ourselves on quality, reliability, and customer satisfaction.
-            Our commitment to excellence and strict quality control ensures that every shipment meets the highest international standards. Partner with us for a seamless export experience.
+            <span className=" secondary-yellow">HD GROUP </span> 
+            {t('welcomeText')}
           </p>
         </motion.div>
       </section>
@@ -188,10 +203,10 @@ export default function HomePage() {
             variants={fadeInUp}
           >
             <h2 className="text-3xl md:text-4xl main-blue mb-4 text-[#0a1f44]">
-              Our Product Categories
+               {t('products')}
             </h2>
             <p className="text-gray-700 max-w-2xl mx-auto">
-              Discover our range of export products, carefully selected and prepared for global markets
+              {t('productsText')} 
             </p>
           </motion.div>
 
@@ -252,7 +267,7 @@ export default function HomePage() {
             variants={fadeInUp}
           >
             <h2 className="text-3xl md:text-4xl">
-              <span className="main-blue">Why Choose </span>
+              <span className="main-blue">{t('chooseUs')} </span>
               <span className="secondary-yellow">HD GROUP</span>
             </h2>
           </motion.div>

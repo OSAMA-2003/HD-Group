@@ -4,44 +4,40 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { useLocale } from "next-intl"; // Added this
 import MenuToggle from "@/components/UI/MenuToggle";
-// Import the new component
 import LanguageSelector from "@/components/UI/LanguageSelector";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  
-  const [selectedLang, setSelectedLang] = useState({ 
-    code: 'EN', 
-    name: 'English', 
-    flag: '/flags/us.svg' 
-  });
-  
+  const currentLocale = useLocale(); // Detects 'en', 'fr', etc.
   const pathname = usePathname();
 
   const languages = [
-    { code: 'EN', name: 'English', flag: '/flags/us.svg' },
-    { code: 'CN', name: 'Chinese', flag: '/flags/cn.svg' },
-    { code: 'FR', name: 'French',  flag: '/flags/fr.png' },
+    { code: 'En', name: 'English', flag: '/flags/us.svg' },
+    { code: 'Zh', name: 'Chinese', flag: '/flags/cn.svg' },
+    { code: 'Fr', name: 'French',  flag: '/flags/fr.png' },
     { code: 'Ru', name: 'Russian', flag: '/flags/ru.png' },
   ];
+
+  // Derive the selected language object from the URL locale
+  const selectedLang = languages.find(
+    (l) => l.code.toLowerCase() === currentLocale.toLowerCase()
+  ) || languages[0];
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) setIsMobileMenuOpen(false);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const navItems = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
     { name: "Products", href: "/products/fruits" },
   ];
-
-  // Close mobile menu on resize to desktop
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 1024) {
-        setIsMobileMenuOpen(false);
-      }
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   return (
     <nav className="flex items-center justify-between w-full px-6 py-4 bg-white lg:px-12 xl:px-24 z-50 relative ">
@@ -61,17 +57,14 @@ export default function Navbar() {
       {/* --- Desktop Menu --- */}
       <div className="hidden lg:flex items-center space-x-8 xl:space-x-12">
         {navItems.map((item) => {
-          const isActive = pathname === item.href;
+          // Logic to check if the path is active regardless of locale
+          const isActive = pathname.endsWith(item.href);
           return (
             <Link
               key={item.href}
               href={item.href}
               className={`font-medium text-sm xl:text-base transition-colors duration-200
-                ${
-                  isActive
-                    ? "text-[#FBCE2E]" 
-                    : "text-[#0a1f44] hover:text-[#FBCE2E]" 
-                }
+                ${isActive ? "text-[#FBCE2E]" : "text-[#0a1f44] hover:text-[#FBCE2E]"}
               `}
             >
               {item.name}
@@ -82,17 +75,14 @@ export default function Navbar() {
 
       {/* --- Desktop Right Actions --- */}
       <div className="hidden lg:flex items-center gap-4">
-        {/* Desktop Language Selector */}
         <LanguageSelector 
-          selectedLang={selectedLang} 
-          setSelectedLang={setSelectedLang} 
+          selectedLang={selectedLang}
           languages={languages} 
           isMobile={false}
         />
 
         <Link href="/contact" className="px-6 py-2.5 rounded-lg bg-[#FBCE2E] blue-main font-medium text-sm hover:bg-[#e4b219] transition-all shadow-md hover:shadow-lg">
           Contact Us
-    
         </Link>
       </div>
 
@@ -118,8 +108,6 @@ export default function Navbar() {
           isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        
-        {/* Navigation Links */}
         <div className="px-8 py-4 flex-grow space-y-8 overflow-y-auto">
           {navItems.map((item) => (
             <Link
@@ -127,7 +115,7 @@ export default function Navbar() {
               href={item.href}
               onClick={() => setIsMobileMenuOpen(false)}
               className={`block text-xl font-medium transition-colors ${
-                pathname === item.href ? "text-[#FBCE2E]" : "text-[#0a1f44] hover:text-[#B88E2F]"
+                pathname.endsWith(item.href) ? "text-[#FBCE2E]" : "text-[#0a1f44]"
               }`}
             >
               {item.name}
@@ -135,22 +123,17 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Bottom Actions Area */}
         <div className="px-8 pb-12 space-y-6 bg-white border-t border-gray-100 pt-6">
-          
-          {/* Mobile Language Selector (Identical Style) */}
           <LanguageSelector 
             selectedLang={selectedLang} 
-            setSelectedLang={setSelectedLang} 
             languages={languages} 
             isMobile={true} 
           />
 
-          {/* Contact Button (Full Width Yellow) */}
           <Link
             href="/contact"
             onClick={() => setIsMobileMenuOpen(false)}
-            className="block w-full py-4 rounded-xl bg-[#FCD34D] text-[#0a1f44] text-center font-medium text-lg shadow-md hover:bg-[#fbbf24] transition-all active:scale-[0.98]"
+            className="block w-full py-4 rounded-xl bg-[#FCD34D] text-[#0a1f44] text-center font-medium text-lg shadow-md hover:bg-[#fbbf24] transition-all"
           >
             Contact Us
           </Link>

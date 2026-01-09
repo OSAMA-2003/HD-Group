@@ -9,10 +9,9 @@ import en from "react-phone-number-input/locale/en";
 import "react-phone-number-input/style.css"; 
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
 import { useState } from "react";
-// 1. Import Framer Motion
+
 import { motion } from 'framer-motion';
 
-// --- Animation Variants (Consistent with other pages) ---
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
   visible: { 
@@ -77,8 +76,8 @@ export default function ContactPage() {
       {/* Header Section */}
       <div 
         className="bg-white py-8 px-4 text-center shadow-sm border-b border-gray-100">
-        <h1 className="text-4xl main-blue mb-4 font-bold">
-          Let's Connect With <span className="text-[#d4af37]">HD Group</span>
+        <h1 className="text-4xl main-blue mb-4 ">
+          Let's Connect With <span className="secondary-yellow">HD Group</span>
         </h1>
         <p className="max-w-3xl mx-auto text-slate-600 leading-relaxed">
           We support international partners with high-quality Egyptian products and reliable export solutions. 
@@ -98,8 +97,8 @@ export default function ContactPage() {
             variants={staggerContainer}
           >
             <motion.div variants={fadeInUp} className='bg-white rounded-2xl p-5 shadow-sm border border-gray-100'>
-              <span className="text-[#d4af37] tracking-wide uppercase text-sm font-bold">Get In Touch</span>
-              <h2 className="text-2xl font-bold main-blue mt-2 mb-4">
+              <span className="text-[#d4af37] tracking-wide uppercase text-sm font-bold ">Get In Touch</span>
+              <h2 className="text-2xl  main-blue mt-2 mb-4">
                 Seamless Communication, Global Impact.
               </h2>
               <p className="text-slate-600 mb-8 leading-relaxed">
@@ -107,19 +106,18 @@ export default function ContactPage() {
               </p>
 
               <motion.div className="grid gap-8" variants={staggerContainer}>
-                {/* Email */}
                 <motion.div variants={fadeInUp} className="flex gap-4">
                   <div className="w-10 h-10 bg-[#d4af37] rounded-full flex items-center justify-center flex-shrink-0">
                     <Mail className="w-4 h-4 text-white" />
                   </div>
                   <div>
-                    <h3 className="main-blue text-lg font-semibold">Email</h3>
+                    <h3 className="main-blue text-lg font-semibold">E mail</h3>
                     <p className="text-slate-600">info@hdgroup-export.com</p>
                     <p className="text-slate-600">sales@hdgroup-export.com</p>
                   </div>
                 </motion.div>
 
-                {/* Phone */}
+               
                 <motion.div variants={fadeInUp} className="flex gap-4">
                   <div className="w-10 h-10 bg-[#d4af37] rounded-full flex items-center justify-center flex-shrink-0">
                     <Phone className="w-4 h-4 text-white" />
@@ -130,7 +128,7 @@ export default function ContactPage() {
                   </div>
                 </motion.div>
 
-                {/* Location */}
+               
                 <motion.div variants={fadeInUp} className="flex gap-4">
                   <div className="w-10 h-10 bg-[#d4af37] rounded-full flex items-center justify-center flex-shrink-0">
                     <MapPin className="w-4 h-4 text-white" />
@@ -143,7 +141,7 @@ export default function ContactPage() {
                   </div>
                 </motion.div>
 
-                {/* Working Hours */}
+                
                 <motion.div variants={fadeInUp} className="flex gap-4">
                   <div className="w-10 h-10 bg-[#d4af37] rounded-full flex items-center justify-center flex-shrink-0">
                     <Clock className="w-4 h-4 text-white" />
@@ -177,7 +175,7 @@ export default function ContactPage() {
             
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
               
-              {/* Full Name */}
+             
               <div>
                 <label className="block text-sm font-medium main-blue mb-2">
                   Full Name <span className="text-red-500">*</span>
@@ -193,7 +191,7 @@ export default function ContactPage() {
                 {errors.fullName && <p className="text-red-500 text-sm mt-1">{errors.fullName.message}</p>}
               </div>
 
-              {/* Email */}
+              
               <div>
                 <label className="block text-sm font-medium main-blue mb-2">
                   Email Address <span className="text-red-500">*</span>
@@ -209,7 +207,7 @@ export default function ContactPage() {
                 {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>}
               </div>
 
-              {/* Company */}
+              
               <div>
                 <label className="block text-sm font-medium main-blue mb-2">
                   Company Name
@@ -222,10 +220,8 @@ export default function ContactPage() {
                 />
               </div>
 
-              {/* Phone & Country Row */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                
-                {/* Phone Number */}
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">                             
                 <div>
                   <label className="block text-sm font-medium main-blue mb-2">
                     Phone Number <span className="text-red-500">*</span>
@@ -248,7 +244,7 @@ export default function ContactPage() {
                   {errors.phoneNumber && <p className="text-red-500 text-sm mt-1">{errors.phoneNumber.message}</p>}
                 </div>
 
-                {/* Country Dropdown */}
+               
                 <div>
                   <label className="block text-sm font-medium main-blue mb-2">
                     Country <span className="text-red-500">*</span>
@@ -270,7 +266,7 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Product Interest */}
+              
               <div>
                 <label className="block text-sm font-medium main-blue mb-2">
                   Product Interest
@@ -287,7 +283,7 @@ export default function ContactPage() {
                 </select>
               </div>
 
-              {/* Message */}
+             
               <div>
                 <label className="block text-sm font-medium main-blue mb-2">
                   Message <span className="text-red-500">*</span>

@@ -4,8 +4,8 @@ import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { ChevronDown } from "lucide-react"; 
-import MenuToggle from "@/components/MenuToggle"; // Import the component
+import { ChevronDown, ArrowRight } from "lucide-react"; 
+import MenuToggle from "@/components/MenuToggle"; 
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -30,7 +30,7 @@ export default function Navbar() {
 
   const navItems = [
     { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
+    { name: "About Us", href: "/about" },
     { name: "Products", href: "/products/fruits" },
   ];
 
@@ -65,7 +65,7 @@ export default function Navbar() {
     <nav className="flex items-center justify-between w-full px-6 py-4 bg-white lg:px-12 xl:px-24 z-50 relative">
       
       {/* --- Logo --- */}
-      <Link href="/" className="flex items-center space-x-2">
+      <Link href="/" className="flex items-center space-x-2 z-50">
         <Image
           src="/logoo.png" 
           alt="HD Group Logo"
@@ -98,10 +98,9 @@ export default function Navbar() {
         })}
       </div>
 
-      {/* --- Right Actions (Lang + Contact) --- */}
+      {/* --- Desktop Right Actions --- */}
       <div className="hidden lg:flex items-center gap-4">
-        
-        {/* Language Dropdown */}
+        {/* Desktop Language Dropdown */}
         <div className="relative" ref={langMenuRef}>
           <button
             onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
@@ -109,19 +108,13 @@ export default function Navbar() {
           >
             <span className="flex items-center gap-2">
               <div className="relative w-6 h-6 overflow-hidden rounded-full shadow-sm">
-                <Image 
-                  src={selectedLang.flag} 
-                  alt={selectedLang.name} 
-                  fill
-                  className="object-cover"
-                />
+                <Image src={selectedLang.flag} alt={selectedLang.name} fill className="object-cover" />
               </div>
               <span className="font-medium text-sm">{selectedLang.code}</span>
             </span>
             <ChevronDown size={16} className={`transition-transform duration-200 ${isLangMenuOpen ? 'rotate-180' : ''}`} />
           </button>
-
-          {/* Dropdown Panel */}
+          
           {isLangMenuOpen && (
             <div className="absolute top-full right-0 mt-2 w-full min-w-[140px] bg-white border border-gray-100 rounded-lg shadow-xl py-1 z-50">
               {languages.map((lang) => (
@@ -131,12 +124,7 @@ export default function Navbar() {
                   className="w-full flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-yellow-50 hover:text-[#d4af37] transition-colors text-left"
                 >
                   <div className="relative w-6 h-6 overflow-hidden rounded-full shadow-sm">
-                    <Image 
-                      src={lang.flag} 
-                      alt={lang.name} 
-                      fill
-                      className="object-cover"
-                    />
+                    <Image src={lang.flag} alt={lang.name} fill className="object-cover" />
                   </div>
                   <span>{lang.name}</span>
                 </button>
@@ -145,17 +133,13 @@ export default function Navbar() {
           )}
         </div>
 
-        {/* Contact Button */}
-        <Link
-          href="/contact"
-          className="px-6 py-2.5 rounded-lg bg-[#d4af37] text-white font-medium text-sm hover:bg-[#b08d28] transition-all shadow-md hover:shadow-lg"
-        >
+        <Link href="/contact" className="px-6 py-2.5 rounded-lg bg-[#d4af37] text-white font-medium text-sm hover:bg-[#b08d28] transition-all shadow-md hover:shadow-lg">
           Contact Us
         </Link>
       </div>
 
-      {/* --- NEW MENU TOGGLE COMPONENT --- */}
-      <div className="lg:hidden ml-4 flex items-center">
+      {/* --- Mobile Menu Toggle --- */}
+      <div className="lg:hidden ml-4 flex items-center z-50">
         <MenuToggle 
           isOpen={isMobileMenuOpen} 
           toggle={() => setIsMobileMenuOpen(!isMobileMenuOpen)} 
@@ -165,81 +149,82 @@ export default function Navbar() {
       {/* --- Mobile Menu Overlay --- */}
       {isMobileMenuOpen && (
         <div
-          className="fixed inset-0  lg:hidden z-40"
+          className="fixed inset-0 bg-black/40 backdrop-blur-[2px] lg:hidden z-40"
           onClick={() => setIsMobileMenuOpen(false)}
         />
       )}
 
-      {/* --- Mobile Menu Drawer --- */}
+      {/* --- Mobile Menu Drawer (Styled like screenshot) --- */}
       <div
-        className={`fixed top-20 right-0 h-full w-[80%] max-w-sm bg-white shadow-2xl transform transition-transform duration-300 ease-in-out lg:hidden z-50 ${
+        className={`fixed top-0 right-0 h-full w-[50%] max-w-sm bg-white shadow-2xl transform transition-transform duration-300 ease-in-out lg:hidden z-40 flex flex-col pt-24 ${
           isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-
-        {/* Links & Languages */}
-        <div className="p-6 flex flex-col h-full overflow-y-auto">
-          
-          {/* Nav Links */}
-          <div className="space-y-4 mb-8">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className={`block text-lg font-medium ${
-                  pathname === item.href ? "text-[#d4af37]" : "text-[#0a1f44]"
-                }`}
-              >
-                {item.name}
-              </Link>
-            ))}
-          </div>
-
-          <hr className="border-gray-100 mb-8" />
-
-          {/* Mobile Language Selector */}
-          <div className="mb-8">
-            <h3 className="text-xs uppercase text-gray-400 font-bold tracking-wider mb-4">Select Language</h3>
-            <div className="grid grid-cols-2 gap-3">
-              {languages.map((lang) => (
-                <button
-                  key={lang.code}
-                  onClick={() => {
-                    handleLangSelect(lang);
-                    setIsMobileMenuOpen(false);
-                  }}
-                  className={`flex items-center gap-2 p-3 rounded-lg border ${
-                    selectedLang.code === lang.code 
-                      ? "border-[#d4af37] bg-yellow-50 text-[#0a1f44]" 
-                      : "border-gray-200 text-gray-600"
-                  }`}
-                >
-                  <div className="relative w-6 h-6 overflow-hidden rounded-full shadow-sm">
-                    <Image 
-                      src={lang.flag} 
-                      alt={lang.name} 
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <span className="text-sm font-medium">{lang.name}</span>
-                </button>
-              ))}
-            </div>
-          </div>
-
-          {/* Contact Button Mobile */}
-          <div className="mt-10 pb-8">
+        
+        {/* Navigation Links */}
+        <div className="px-8 py-4 flex-grow space-y-8">
+          {navItems.map((item) => (
             <Link
-              href="/contact"
+              key={item.href}
+              href={item.href}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="block w-full py-3.5 rounded-xl bg-[#d4af37] text-white text-center font-bold shadow-lg"
+              className={`block text-xl font-medium transition-colors ${
+                pathname === item.href ? "text-[#B88E2F]" : "text-[#0a1f44] hover:text-[#B88E2F]"
+              }`}
             >
-              Contact Us
+              {item.name}
             </Link>
+          ))}
+        </div>
+
+        {/* Bottom Actions Area */}
+        <div className="px-8 pb-12 space-y-6">
+          
+          {/* Language Selector (Styled like a dropdown field) */}
+          <div className="relative">
+             <button
+                onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
+                className="w-full flex items-center justify-between px-4 py-3 bg-white border border-gray-200 rounded-xl text-[#0a1f44] hover:border-[#d4af37] transition-colors shadow-sm"
+              >
+                <span className="flex items-center gap-3">
+                  <div className="relative w-6 h-6 overflow-hidden rounded-full shadow-sm">
+                    <Image src={selectedLang.flag} alt={selectedLang.name} fill className="object-cover" />
+                  </div>
+                  <span className="font-semibold text-base">{selectedLang.name}</span>
+                </span>
+                <ChevronDown size={20} className={`text-gray-400 transition-transform ${isLangMenuOpen ? 'rotate-180' : ''}`} />
+              </button>
+
+              {/* Mobile Language Dropdown List */}
+              {isLangMenuOpen && (
+                <div className="absolute bottom-full left-0 mb-2 w-full  border-gray-100 rounded-xl shadow-xl py-2 z-50 max-h-48 overflow-y-auto">
+                  {languages.map((lang) => (
+                    <button
+                      key={lang.code}
+                      onClick={() => {
+                        handleLangSelect(lang);
+                        setIsLangMenuOpen(false); // Close dropdown after selection
+                      }}
+                      className="w-full flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-yellow-50 hover:text-[#d4af37] transition-colors text-left"
+                    >
+                      <div className="relative w-6 h-6 overflow-hidden rounded-full shadow-sm">
+                        <Image src={lang.flag} alt={lang.name} fill className="object-cover" />
+                      </div>
+                      <span className="text-base font-medium">{lang.name}</span>
+                    </button>
+                  ))}
+                </div>
+              )}
           </div>
 
+          {/* Contact Button (Full Width Yellow) */}
+          <Link
+            href="/contact"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="block w-full py-4 rounded-xl bg-[#FCD34D] text-[#0a1f44] text-center font-bold text-lg shadow-md hover:bg-[#fbbf24] transition-all active:scale-[0.98]"
+          >
+            Contact Us
+          </Link>
         </div>
       </div>
     </nav>

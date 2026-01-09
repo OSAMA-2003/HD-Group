@@ -88,7 +88,7 @@ export const products = [
   {
     id: 'grapes',
     category: 'fresh-fruits',
-    name: 'Fresh لأrapes',
+    name: 'Fresh Grapes',
     image: '/products/fruites/عنب.png',
     description: 'Premium Egyptian Pomegranate with excellent taste and long shelf life.',
     origin: 'Egypt',
@@ -330,7 +330,7 @@ export const products = [
   },
 
 
-  // Legumes & Dry Goods
+  // Legumes & Dry Goods -------------------------------------------------------------------
 
   {
     id: 'Peas',

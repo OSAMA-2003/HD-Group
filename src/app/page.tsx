@@ -103,7 +103,7 @@ export default function HomePage() {
             playsInline
             className="w-full h-full object-cover"
           >
-            <source src="/images/Home2.mp4" type="video/mp4" />
+            <source src="/images/home.webm" type="video/mp4" />
             Your browser does not support the video.
           </video>
           <div className="absolute inset-0 bg-[#0a1f44] opacity-80"></div>

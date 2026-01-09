@@ -67,7 +67,7 @@ export default function AboutPage() {
                 className="bg-white py-8 px-4 text-center shadow-sm border-b border-b-gray-100"
                 
             >
-                <h1 className="text-4xl main-blue mb-4 font-bold">
+                <h1 className="text-4xl main-blue mb-4 ">
                     About <span className="secondary-yellow">HD Group</span>
                 </h1>
                 <p className="max-w-3xl mx-auto text-slate-600 leading-relaxed">
@@ -86,7 +86,7 @@ export default function AboutPage() {
                         viewport={{ once: true, margin: "-100px" }}
                         variants={staggerContainer}
                     >
-                        <motion.h2 variants={fadeInUp} className="text-3xl md:text-4xl text-center main-blue mb-10 font-bold">
+                        <motion.h2 variants={fadeInUp} className="text-3xl md:text-4xl text-center main-blue mb-10 ">
                             Who We Are
                         </motion.h2>
 
@@ -96,7 +96,7 @@ export default function AboutPage() {
                                 variants={fadeInUp}
                                 className="border bg-white hover:bg-gray-100 border-gray-300 rounded-2xl p-8 flex flex-col items-center text-center shadow-sm hover:shadow-md transition-all duration-300"
                             >
-                                <h3 className="text-xl font-bold main-blue mb-4">Our Mission</h3>
+                                <h3 className="text-xl  main-blue mb-4">Our Mission</h3>
                                 <p className="text-md md:text-lg leading-relaxed text-gray-700">
                                     Our mission is to deliver safe, high-quality products that meet international standards while ensuring efficiency, transparency, and reliability across the export process. We aim to support our partners by providing consistent supply, careful product handling, and professional logistics solutions that add real value to their businesses.
                                 </p>
@@ -107,7 +107,7 @@ export default function AboutPage() {
                                 variants={fadeInUp}
                                 className="border-2 bg-white hover:bg-yellow-50 border-[#FBCE2E] rounded-2xl p-8 flex flex-col items-center text-center shadow-md relative transform md:scale-105 transition-all duration-300 z-10"
                             >
-                                <h3 className="text-xl font-bold secondary-yellow mb-4">HD GROUP for Export</h3>
+                                <h3 className="text-xl secondary-yellow mb-4">HD GROUP for Export</h3>
                                 <p className="text-md md:text-lg leading-relaxed text-gray-700">
                                     HD GROUP for Export is an Egyptian export company providing a diverse range of high-quality products to international markets. Our portfolio includes fresh vegetables, fresh fruits, medical supplies, and staple food products. We focus on delivering reliable export solutions that meet global quality standards while building long-term partnerships.
                                 </p>
@@ -118,7 +118,7 @@ export default function AboutPage() {
                                 variants={fadeInUp}
                                 className="border bg-white hover:bg-gray-100 border-gray-300 rounded-2xl p-8 flex flex-col items-center text-center shadow-sm hover:shadow-md transition-all duration-300"
                             >
-                                <h3 className="text-xl font-bold main-blue mb-4">Our Vision</h3>
+                                <h3 className="text-xl main-blue mb-4">Our Vision</h3>
                                 <p className="text-md md:text-lg leading-relaxed text-gray-700">
                                     Our vision is to become a trusted global export partner recognized for quality, integrity, and sustainability. We strive to expand our market reach, diversify our product offerings, and continuously improve our processes to meet the evolving needs of international markets and contribute to sustainable global trade.
                                 </p>
@@ -134,7 +134,7 @@ export default function AboutPage() {
                         viewport={{ once: true, margin: "-100px" }}
                         variants={fadeInUp}
                     >
-                        <h2 className="text-3xl md:text-4xl mb-8 font-bold">
+                        <h2 className="text-3xl md:text-4xl mb-8">
                             <span className="main-blue">Our Story </span>
                             <span className="secondary-yellow">HD GROUP</span>
                         </h2>
@@ -168,7 +168,7 @@ export default function AboutPage() {
                         viewport={{ once: true }}
                         variants={fadeInUp}
                     >
-                        <h2 className="text-3xl main-blue mb-3 font-bold">Our Leadership Team</h2>
+                        <h2 className="text-3xl main-blue mb-3 ">Our Leadership Team</h2>
                         <p className="main-blue text-sm md:text-base max-w-2xl mx-auto">
                             Meet the experienced professionals leading HD GROUP to excellence in international trade
                         </p>
@@ -189,23 +189,24 @@ export default function AboutPage() {
                                 className="bg-white rounded-br-[3.5rem] overflow-hidden border border-[#d4af37] shadow-sm hover:shadow-lg transition-all duration-300 relative group"
                             >
                                 {/* Image Container with Social Icons */}
-                                <div className="relative w-full bg-white h-64 overflow-hidden">
-                                    <img
-                                        src={member.image}
-                                        alt={member.name}
-                                        className="w-full h-full object-contain object-bottom transition-transform duration-500 group-hover:scale-105"
-                                    />
+                                    <div className="relative  w-full bg-white">
+                                        {/* Placeholder Image */}
+                                        <img
+                                            src={member.image}
+                                            alt={member.name}
+                                            className="rounded-br-[3.5rem]  w-full h-full object-contain "
+                                        />
 
-                                    {/* Social Media Icons (Top Right) */}
-                                    <div className="absolute top-4 right-4 flex flex-col gap-2">
-                                        <div className="w-8 h-8 bg-[#d4af37] rounded flex items-center justify-center cursor-pointer hover:bg-[#b08d28] transition-colors">
-                                            <Facebook className='text-white w-4 h-4' />
-                                        </div>
-                                        <div className="w-8 h-8 bg-[#d4af37] rounded flex items-center justify-center cursor-pointer hover:bg-[#b08d28] transition-colors">
-                                            <Instagram className='text-white w-4 h-4' />
+                                        {/* Social Media Icons (Top Right) */}
+                                        <div className="absolute top-4 right-4 flex flex-col gap-2">
+                                            <div className="w-8 h-8 bg-[#d4af37] rounded flex items-center justify-center cursor-pointer hover:bg-[#b08d28] transition-colors">
+                                                <Facebook className='text-white' />
+                                            </div>
+                                            <div className="w-8 h-8 bg-[#d4af37] rounded flex items-center justify-center cursor-pointer hover:bg-[#b08d28] transition-colors">
+                                                <Instagram className='text-white' />
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
                                 {/* Text Content */}
                                 <div className="p-6 pt-4 text-left">
@@ -227,7 +228,7 @@ export default function AboutPage() {
                         viewport={{ once: true }}
                         variants={fadeInUp}
                     >
-                        <h2 className="text-2xl md:text-3xl main-blue mb-3 font-bold">
+                        <h2 className="text-2xl md:text-3xl main-blue mb-3 ">
                             Global Export Markets
                         </h2>
                         <p className="main-blue text-sm mb-10">

@@ -5,12 +5,11 @@ import Image from "next/image";
 import { categories, products } from "@/data/products";
 import { Apple, Carrot, BriefcaseMedical, Package } from 'lucide-react';
 import Button from "@/components/Button";
-// 1. Import Framer Motion
 import { motion } from "framer-motion";
 
 // --- Animation Variants ---
 const fadeInUp = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 20 },
   visible: { 
     opacity: 1,
     y: 0,
@@ -23,12 +22,13 @@ const staggerContainer = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1, // Faster stagger for list items
+      staggerChildren: 0.1,
       delayChildren: 0.1
     }
   }
 };
 
+// 1. Define your routes map clearly
 const categoryRoutes: Record<string, string> = {
   'fresh-vegetables': '/products/vegetables',
   'fresh-fruits': '/products/fruits',
@@ -39,6 +39,10 @@ const categoryRoutes: Record<string, string> = {
 export default function ProductsPage({ category }: { category: string }) {
   
   const filteredProducts = products.filter(p => p.category === category);
+
+  // 2. Get the correct base path for the current category
+  // Example: if category is 'medical-supplies', this becomes '/products/medical'
+  const currentBasePath = categoryRoutes[category] || '/products';
 
   const getCategoryIcon = (categoryId: string) => {
     const icons = {
@@ -59,9 +63,8 @@ export default function ProductsPage({ category }: { category: string }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 py-6">
           <div className="flex flex-col lg:items-center lg:justify-center gap-8 md:gap-12">
             
-            <div 
-              className="text-center">
-              <h1 className="text-3xl lg:text-3xl font-semibold text-gray-900">Our Products</h1>
+            <div className="text-center">
+              <h1 className="text-3xl lg:text-3xl  text-gray-900">Our  <span className="secondary-yellow">Products</span> </h1>
             </div>
             
             {/* Category Filter Navigation */}
@@ -77,7 +80,7 @@ export default function ProductsPage({ category }: { category: string }) {
                 const isActive = category === cat.id;
 
                 return (
-                  <motion.div key={cat.id} variants={fadeInUp}>
+                  <div key={cat.id} >
                     <Link
                       href={href}
                       className={`group flex items-center cursor-pointer gap-2 px-6 py-4 rounded-lg text-sm font-medium transition-all duration-200 ${
@@ -86,17 +89,15 @@ export default function ProductsPage({ category }: { category: string }) {
                           : 'text-gray-700 hover:text-gray-900 bg-gray-100'
                       }`}
                     >
-                      {/* Mobile: Icon only */}
                       <div className="lg:hidden">
                         {Icon}
                       </div>
-                      {/* Desktop: Icon + Text */}
                       <div className="hidden lg:flex items-center gap-2">
                         {Icon}
                         <span>{cat.name}</span>
                       </div>
                     </Link>
-                  </motion.div>
+                  </div>
                 );
               })}
             </motion.nav>
@@ -116,7 +117,8 @@ export default function ProductsPage({ category }: { category: string }) {
           {filteredProducts.map((product) => (
             <motion.div key={product.id} variants={fadeInUp} className="h-full">
               <Link
-                href={`/products/${category === 'staple-foods' ? 'dry-goods' : category.replace('fresh-', '')}/${product.id}`}
+                // 3. UPDATED LINK LOGIC: Uses the map directly + product ID
+                href={`${currentBasePath}/${product.id}`}
                 className="group bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 hover:-translate-y-1 block h-full flex flex-col"
               >
                 <div className="relative h-72 bg-white overflow-hidden shrink-0">

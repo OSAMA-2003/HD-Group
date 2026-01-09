@@ -49,7 +49,7 @@ export default function Navbar() {
       {/* --- Logo --- */}
       <Link href="/" className="flex items-center space-x-2 z-50">
         <Image
-          src="/logo.webp" 
+          src="/logo.png" 
           alt="HD Group Logo"
           width={150}
           height={150}

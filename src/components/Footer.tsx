@@ -44,7 +44,7 @@ function Footer() {
             <Link href="/" className="block">
               
               <Image
-                src="/logo-white.png" 
+                src="/logo-white.webp" 
                 alt="HD Group"
                 width={120}
                 height={120}

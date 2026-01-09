@@ -4,7 +4,7 @@ import React from 'react';
 import { ArrowRight, ShieldCheck, Globe, Truck, Handshake } from 'lucide-react';
 // 1. Import Framer Motion
 import { motion } from 'framer-motion';
-import Button from '@/components/Button';
+import Button from '@/components/UI/Button';
 
 // --- Animation Variants Configuration ---
 // These are defined outside the component to prevent re-creation on every render (Performance Boost)
@@ -40,28 +40,28 @@ export default function HomePage() {
       title: "Fresh Fruits",
       link: "/products/fruits",
       description: "Premium quality fruits selected for their sweetness and nutritional value for global export.",
-      image: "/products/fruites/ALL .png"
+      image: "/products/fruites/ALL .webp"
     },
     {
       id: 2,
       title: "Fresh Vegetables",
       link: "/products/vegetables",
       description: "Farm-fresh vegetables harvested at peak ripeness and delivered to international markets.",
-      image: "/products/veg/ALL VEGE.png"
+      image: "/products/veg/ALL VEGE.webp"
     },
     {
       id: 3,
       title: "Medical Supplies",
       link: "/products/medical",
       description: "Certified medical equipment and supplies meeting rigorous international safety standards.",
-      image: "/images/products-home.png"
+      image: "/images/products-home.webp"
     },
     {
       id: 4,
       title: "Legumes & Dry Goods",
       link: "/products/dry-goods",
       description: "Aromatic and authentic spices sourced directly from Egyptian farms to your kitchen.",
-      image: "/images/products-home.png"
+      image: "/images/products-home.webp"
     },
   ];
 
@@ -95,19 +95,31 @@ export default function HomePage() {
       <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
 
         {/* Background Video with Overlay */}
-        <div className="absolute inset-0 z-0">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-full object-cover"
-          >
-            <source src="/images/home.webm" type="video/mp4" />
-            Your browser does not support the video.
-          </video>
-          <div className="absolute inset-0 bg-[#0a1f44] opacity-80"></div>
-        </div>
+      <div className="absolute inset-0 z-0">
+  <video
+    autoPlay
+    loop
+    muted
+    playsInline
+    preload="auto"
+    poster="/images/home.jpg"
+    className="w-full h-full object-cover"
+  >
+    <source src="/images/home.mp4" type="video/mp4" />
+    <source src="/images/home.webm" type="video/webm" />
+
+    {/* Fallback for very old browsers */}
+    <img
+      src="/images/home.jpg"
+      alt="Background"
+      className="w-full h-full object-cover"
+    />
+  </video>
+
+  <div className="absolute inset-0 bg-[#0a1f44] opacity-80"></div>
+</div>
+
+
 
         {/* Hero Content - Animated */}
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">

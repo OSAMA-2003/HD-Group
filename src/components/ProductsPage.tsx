@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { categories, products } from "@/data/products";
 import { Apple, Carrot, BriefcaseMedical, Package } from 'lucide-react';
-import Button from "@/components/Button";
+import Button from "@/components/UI/Button";
 import { motion } from "framer-motion";
 
 // --- Animation Variants ---

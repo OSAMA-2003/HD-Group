@@ -4,7 +4,6 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
-import { aside } from "framer-motion/client";
 import { routing } from "@/i18n/routing";
 
 // 2. Configure Roboto

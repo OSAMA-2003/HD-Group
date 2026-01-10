@@ -4,23 +4,25 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useLocale } from "next-intl"; // Added this
+import { useLocale, useTranslations } from "next-intl"; 
 import MenuToggle from "@/components/UI/MenuToggle";
 import LanguageSelector from "@/components/UI/LanguageSelector";
 
 export default function Navbar() {
+  const t = useTranslations('navigation'); // Hook for translations
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const currentLocale = useLocale(); // Detects 'en', 'fr', etc.
+  const currentLocale = useLocale(); 
   const pathname = usePathname();
 
+  // 1. Translated Languages Array
   const languages = [
-    { code: 'En', name: 'English', flag: '/flags/us.svg' },
-    { code: 'Zh', name: 'Chinese', flag: '/flags/cn.svg' },
-    { code: 'Fr', name: 'French',  flag: '/flags/fr.png' },
-    { code: 'Ru', name: 'Russian', flag: '/flags/ru.png' },
+    { code: 'En', name: t('lang_en'), flag: '/flags/us.svg' },
+    { code: 'Zh', name: t('lang_zh'), flag: '/flags/cn.svg' },
+    { code: 'Fr', name: t('lang_fr'),  flag: '/flags/fr.png' },
+    { code: 'Ru', name: t('lang_ru'), flag: '/flags/ru.png' },
   ];
 
-  // Derive the selected language object from the URL locale
+  // Derive the selected language object
   const selectedLang = languages.find(
     (l) => l.code.toLowerCase() === currentLocale.toLowerCase()
   ) || languages[0];
@@ -33,10 +35,11 @@ export default function Navbar() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // 2. Translated Nav Items
   const navItems = [
-    { name: "Home", href: "/" },
-    { name: "About Us", href: "/about" },
-    { name: "Products", href: "/products/fruits" },
+    { name: t('home'), href: "/" },
+    { name: t('about'), href: "/about" },
+    { name: t('products'), href: "/products/fruits" },
   ];
 
   return (
@@ -57,8 +60,12 @@ export default function Navbar() {
       {/* --- Desktop Menu --- */}
       <div className="hidden lg:flex items-center space-x-8 xl:space-x-12">
         {navItems.map((item) => {
-          // Logic to check if the path is active regardless of locale
-          const isActive = pathname.endsWith(item.href);
+          // Logic to check active path
+          // Note: Standard next/navigation usePathname includes the locale (e.g. /en/about)
+          // You might need to adjust this depending on how you want strict highlighting to work.
+          // A simple check is usually sufficient:
+          const isActive = pathname === item.href || (item.href !== '/' && pathname.includes(item.href));
+          
           return (
             <Link
               key={item.href}
@@ -82,7 +89,7 @@ export default function Navbar() {
         />
 
         <Link href="/contact" className="px-6 py-2.5 rounded-lg bg-[#FBCE2E] blue-main font-medium text-sm hover:bg-[#e4b219] transition-all shadow-md hover:shadow-lg">
-          Contact Us
+          {t('contact')}
         </Link>
       </div>
 
@@ -115,7 +122,7 @@ export default function Navbar() {
               href={item.href}
               onClick={() => setIsMobileMenuOpen(false)}
               className={`block text-xl font-medium transition-colors ${
-                pathname.endsWith(item.href) ? "text-[#FBCE2E]" : "text-[#0a1f44]"
+                pathname.includes(item.href) && item.href !== '/' ? "text-[#FBCE2E]" : "text-[#0a1f44]"
               }`}
             >
               {item.name}
@@ -135,7 +142,7 @@ export default function Navbar() {
             onClick={() => setIsMobileMenuOpen(false)}
             className="block w-full py-4 rounded-xl bg-[#FCD34D] text-[#0a1f44] text-center font-medium text-lg shadow-md hover:bg-[#fbbf24] transition-all"
           >
-            Contact Us
+            {t('contact')}
           </Link>
         </div>
       </div>

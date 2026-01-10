@@ -6,6 +6,7 @@ import { categories, products } from "@/data/products";
 import { Apple, Carrot, BriefcaseMedical, Package } from 'lucide-react';
 import Button from "@/components/UI/Button";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl"; 
 
 // --- Animation Variants ---
 const fadeInUp = {
@@ -28,7 +29,6 @@ const staggerContainer = {
   }
 };
 
-// 1. Define your routes map clearly
 const categoryRoutes: Record<string, string> = {
   'fresh-vegetables': '/products/vegetables',
   'fresh-fruits': '/products/fruits',
@@ -37,11 +37,13 @@ const categoryRoutes: Record<string, string> = {
 };
 
 export default function ProductsPage({ category }: { category: string }) {
+  // 1. UI Translations (Headers, Categories, Badges)
+  const t = useTranslations('products_page'); 
   
-  const filteredProducts = products.filter(p => p.category === category);
+  // 2. Data Translations (Product Names, Descriptions from the JSON we made earlier)
+  const tItems = useTranslations('product_details.items'); 
 
-  // 2. Get the correct base path for the current category
-  // Example: if category is 'medical-supplies', this becomes '/products/medical'
+  const filteredProducts = products.filter(p => p.category === category);
   const currentBasePath = categoryRoutes[category] || '/products';
 
   const getCategoryIcon = (categoryId: string) => {
@@ -64,7 +66,9 @@ export default function ProductsPage({ category }: { category: string }) {
           <div className="flex flex-col lg:items-center lg:justify-center gap-8 md:gap-12">
             
             <div className="text-center">
-              <h1 className="text-3xl lg:text-3xl  text-gray-900">Our  <span className="secondary-yellow">Products</span> </h1>
+              <h1 className="text-3xl lg:text-3xl  text-gray-900">
+                {t('title_main')} <span className="secondary-yellow">{t('title_highlight')}</span>
+              </h1>
             </div>
             
             {/* Category Filter Navigation */}
@@ -94,7 +98,8 @@ export default function ProductsPage({ category }: { category: string }) {
                       </div>
                       <div className="hidden lg:flex items-center gap-2">
                         {Icon}
-                        <span>{cat.name}</span>
+                        {/* Translate Category Name */}
+                        <span>{t(`categories.${cat.id}`)}</span>
                       </div>
                     </Link>
                   </div>
@@ -117,36 +122,43 @@ export default function ProductsPage({ category }: { category: string }) {
           {filteredProducts.map((product) => (
             <motion.div key={product.id} variants={fadeInUp} className="h-full">
               <Link
-                // 3. UPDATED LINK LOGIC: Uses the map directly + product ID
                 href={`${currentBasePath}/${product.id}`}
                 className="group bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 hover:-translate-y-1 block h-full flex flex-col"
               >
                 <div className="relative h-72 bg-white overflow-hidden shrink-0">
                   <Image
                     src={product.image}
-                    alt={product.name}
+                    // Use translated name for ALT text
+                    alt={tItems(`${product.id}.name`)} 
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
+                  
+                  {/* Status Badge */}
                   {product.available ? (
                     <div className="absolute top-4 right-4 bg-green-200 text-green-600 px-3 py-1 rounded-lg text-xs font-medium">
-                      Available
+                      {t('status_available')}
                     </div>
                   ) : (
                     <div className="absolute top-4 right-4 bg-red-100 text-red-500 px-3 py-1 rounded-lg text-xs font-medium">
-                      Not Available
+                      {t('status_unavailable')}
                     </div>
                   )}
                 </div>
                 
                 <div className="p-4 flex flex-col flex-grow">
                   <h3 className="font-bold text-lg text-gray-900 mb-2 leading-tight">
-                    {product.name}
+                    {/* Dynamic Translation: Name */}
+                    {tItems(`${product.id}.name`)}
                   </h3>
-                  <p className="text-gray-600 text-sm mb-4 line-clamp-2 flex-grow">{product.description}</p>
+                  <p className="text-gray-600 text-sm mb-4 line-clamp-2 flex-grow">
+                    {/* Dynamic Translation: Description */}
+                    {tItems(`${product.id}.desc`)}
+                  </p>
                   
                   <div className="mt-auto">
-                    <Button text="View Details" />
+                    {/* Translated Button Text */}
+                    <Button text={t('btn_details')} />
                   </div>
                 </div>
               </Link>

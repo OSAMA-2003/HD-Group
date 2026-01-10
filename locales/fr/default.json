@@ -1,4 +1,358 @@
 {
+
+  
+  "product_details": {
+    "ui": {
+      "back": "Retour",
+      "specifications": "Spécifications",
+      "label_origin": "Origine",
+      "label_season": "Saison",
+      "label_varieties": "Variétés",
+      "label_packaging": "Emballage",
+      "packaging_title": "Informations sur l'emballage et l'exportation",
+      "btn_request": "Demander des informations",
+      "contact_hint": "Contactez-nous pour les prix, la disponibilité et les détails d'expédition",
+      "why_title": "Pourquoi choisir nos",
+      "season_value": "Mai - Septembre"
+    },
+    "why_us": {
+      "origin_title": "Origine Premium",
+      "origin_text": "Provenant directement des meilleures fermes d'Égypte.",
+      "quality_title": "Qualité Assurée",
+      "quality_text": "Processus de contrôle qualité rigoureux de la récolte à l'emballage.",
+      "export_title": "Emballage Export",
+      "export_text": "Emballage professionnel conçu pour préserver la fraîcheur."
+    },
+    "items": {
+      "orange": {
+        "name": "Orange Fraîche",
+        "desc": "Oranges égyptiennes de qualité supérieure.",
+        "origin": "Égypte",
+        "varieties": "Valencia, Navel",
+        "packaging": "Carton 15kg",
+        "details": "Soigneusement triées pour une fraîcheur maximale."
+      },
+      "banana": {
+        "name": "Bananes Fraîches",
+        "desc": "Bananes égyptiennes au goût sucré.",
+        "origin": "Égypte",
+        "varieties": "Williams",
+        "packaging": "Carton 13kg / 18kg",
+        "details": "Cultivées dans un sol riche en nutriments."
+      },
+       "mango": {
+        "name": "Mangue Fraîche",
+        "desc": "Mangue égyptienne exotique.",
+        "origin": "Égypte",
+        "varieties": "Zebda, Kent, Keitt",
+        "packaging": "Carton 5kg",
+        "details": "Récoltées à maturité parfaite."
+      },
+      "pomegranate": {
+        "name": "Grenade Fraîche",
+        "desc": "Grenades égyptiennes riches en antioxydants.",
+        "origin": "Égypte",
+        "varieties": "Wonderful, Baladi",
+        "packaging": "Carton 4.5kg",
+        "details": "Connues pour leur couleur rouge profond."
+      },
+      "grapes": {
+        "name": "Raisins Frais",
+        "desc": "Raisins égyptiens croquants et sucrés.",
+        "origin": "Égypte",
+        "varieties": "Flame, Crimson",
+        "packaging": "Sacs 5kg / 9kg",
+        "details": "Variétés sans pépins disponibles."
+      },
+      "strawberry": {
+        "name": "Fraise Fraîche",
+        "desc": "Fraises sucrées et aromatiques.",
+        "origin": "Égypte",
+        "varieties": "Festival, Fortuna",
+        "packaging": "Carton 2.5kg",
+        "details": "Manipulation délicate pour préserver la texture."
+      },
+      "tangerine": {
+        "name": "Mandarine Fraîche",
+        "desc": "Agrumes faciles à peler.",
+        "origin": "Égypte",
+        "varieties": "Murcott",
+        "packaging": "Carton 10kg",
+        "details": "Juteuses et colorées."
+      },
+      "apple": {
+        "name": "Pommes Fraîches",
+        "desc": "Pommes égyptiennes croquantes.",
+        "origin": "Égypte",
+        "varieties": "Anna",
+        "packaging": "Carton Standard",
+        "details": "Variété locale précoce."
+      },
+      "sweetPotato": {
+        "name": "Patates Douces",
+        "desc": "Patates douces nutritives.",
+        "origin": "Égypte",
+        "varieties": "Beauregard",
+        "packaging": "Boîte 6kg",
+        "details": "Traitées pour prolonger la durée de conservation."
+      },
+      "potatoes": {
+        "name": "Pommes de Terre",
+        "desc": "Pommes de terre de haute qualité.",
+        "origin": "Égypte",
+        "varieties": "Spunta, Kara",
+        "packaging": "Sacs 10kg / 25kg",
+        "details": "Propres, lavées ou brossées."
+      },
+      "tomatoes": {
+        "name": "Tomates Fraîches",
+        "desc": "Tomates rouges mûres.",
+        "origin": "Égypte",
+        "varieties": "Cherry, Round",
+        "packaging": "Carton 5kg",
+        "details": "Texture ferme pour l'export."
+      },
+      "unions": {
+        "name": "Oignons Frais",
+        "desc": "Oignons dorés et rouges.",
+        "origin": "Égypte",
+        "varieties": "Or, Rouge",
+        "packaging": "Sacs 10kg / 25kg",
+        "details": "Peau sèche pour une longue conservation."
+      },
+      "tablets": {
+        "name": "Comprimés Médicaux",
+        "desc": "Comprimés de qualité pharmaceutique.",
+        "origin": "Égypte",
+        "varieties": "Antibiotiques",
+        "packaging": "Boîte",
+        "details": "Produits certifiés."
+      },
+      "IV": {
+        "name": "Dispositif de Perfusion",
+        "desc": "Sets de perfusion stériles.",
+        "origin": "Égypte",
+        "varieties": "Standard",
+        "packaging": "Sachet Stérile",
+        "details": "Usage unique, stérile."
+      },
+      "Examination-gloves": {
+        "name": "Gants d'Examen",
+        "desc": "Gants en latex/nitrile.",
+        "origin": "Égypte",
+        "varieties": "Poudrés, Non poudrés",
+        "packaging": "Boîte de 100",
+        "details": "Haute sensibilité tactile."
+      },
+      "Examination-gloves-2": {
+        "name": "Gants d'Examen 2",
+        "desc": "Gants en vinyle.",
+        "origin": "Égypte",
+        "varieties": "Vinyle",
+        "packaging": "Boîte de 100",
+        "details": "Solution économique."
+      },
+      "Sterile-gloves": {
+        "name": "Gants Stériles",
+        "desc": "Gants chirurgicaux stériles.",
+        "origin": "Égypte",
+        "varieties": "Tailles 6-9",
+        "packaging": "Paire Stérile",
+        "details": "Protection maximale."
+      },
+      "Syringes": {
+        "name": "Seringues",
+        "desc": "Seringues médicales jetables.",
+        "origin": "Égypte",
+        "varieties": "3ml, 5ml, 10ml",
+        "packaging": "Blister",
+        "details": "Mouvement fluide."
+      },
+      "Insulin-syringes": {
+        "name": "Seringues à Insuline",
+        "desc": "Seringues à aiguille fine.",
+        "origin": "Égypte",
+        "varieties": "1ml / 0.5ml",
+        "packaging": "Polybag",
+        "details": "Aiguille ultra-fine."
+      },
+      "Orthopedic-splints": {
+        "name": "Plaques Orthopédiques",
+        "desc": "Plaques en titane/acier.",
+        "origin": "Égypte",
+        "varieties": "Diverses tailles",
+        "packaging": "Pack Stérile",
+        "details": "Haute résistance."
+      },
+      "Capsules": {
+        "name": "Gélules",
+        "desc": "Gélules vides ou remplies.",
+        "origin": "Égypte",
+        "varieties": "Taille 0, 00",
+        "packaging": "Carton",
+        "details": "Pour formulations pharmaceutiques."
+      },
+      "Prosthetic-joint": {
+        "name": "Prothèse Articulaire",
+        "desc": "Remplacements articulaires.",
+        "origin": "Égypte",
+        "varieties": "Hanche, Genou",
+        "packaging": "Boîte Médicale",
+        "details": "Conçu pour la durabilité."
+      },
+      "Peas": {
+        "name": "Pois Secs",
+        "desc": "Pois secs de haute qualité.",
+        "origin": "Égypte",
+        "varieties": "Vert, Jaune",
+        "packaging": "Sacs 25kg",
+        "details": "Nettoyés et triés."
+      },
+      "Lentils": {
+        "name": "Lentilles",
+        "desc": "Lentilles sèches nutritives.",
+        "origin": "Égypte",
+        "varieties": "Rouge, Brune",
+        "packaging": "Sacs 25kg",
+        "details": "Riche en protéines."
+      },
+      "Beans": {
+        "name": "Haricots Secs",
+        "desc": "Haricots secs premium.",
+        "origin": "Égypte",
+        "varieties": "Haricots Blancs",
+        "packaging": "Sacs 25kg",
+        "details": "Sélection haute qualité."
+      }
+    }
+  }
+,
+  
+  "products_page": {
+    "title_main": "Nos",
+    "title_highlight": "Produits",
+    "status_available": "Disponible",
+    "status_unavailable": "Indisponible",
+    "btn_details": "Voir les détails",
+    "categories": {
+      "fresh-vegetables": "Légumes frais",
+      "fresh-fruits": "Fruits frais",
+      "medical-supplies": "Fournitures médicales",
+      "staple-foods": "Aliments de base"
+    }
+  }
+,
+  "navigation": {
+    "home": "Accueil",
+    "about": "À Propos",
+    "products": "Produits",
+    "contact": "Contactez-nous",
+    "lang_en": "Anglais",
+    "lang_zh": "Chinois",
+    "lang_fr": "Français",
+    "lang_ru": "Russe"
+  },
+
+  "footer": {
+    "description": "Leader égyptien de l'exportation spécialisé dans les produits frais et les fournitures médicales vers les marchés mondiaux.",
+    "follow_us": "Suivez-nous sur les réseaux sociaux",
+    "links_title": "Liens Rapides",
+    "link_home": "Accueil",
+    "link_products": "Produits",
+    "link_about": "À Propos",
+    "products_title": "Nos Produits",
+    "prod_fruits": "Fruits Frais",
+    "prod_veg": "Légumes Frais",
+    "prod_medical": "Fournitures Médicales",
+    "prod_dry": "Aliments de Base et Produits Secs",
+    "contact_title": "Contactez-nous",
+    "label_phone": "Téléphone :",
+    "label_email": "E-mail :",
+    "label_location": "Emplacement :",
+    "location_value": "Le Caire, Égypte - Centre d'Exportation.",
+    "label_hours": "Heures de Travail",
+    "hours_days": "Samedi - Jeudi",
+    "copyright": "© 2025 Tous droits réservés"
+  
+},
+"contact": {
+    "header_title": "Connectons-nous avec",
+    "header_desc": "Nous soutenons les partenaires internationaux avec des produits égyptiens de haute qualité et des solutions d'exportation fiables. Contactez-nous pour discuter de demandes, de devis ou de coopération à long terme.",
+    "info_tag": "Entrez en contact",
+    "info_title": "Communication fluide, impact mondial.",
+    "info_desc": "Nous sommes toujours là pour vous aider à développer votre entreprise avec des exportations égyptiennes de premier choix.",
+    "label_email": "E-mail",
+    "label_phone": "Téléphone",
+    "label_location": "Emplacement",
+    "location_value": "Le Caire, Égypte - Centre d'exportation.",
+    "label_hours": "Heures de travail",
+    "hours_days": "Samedi - Jeudi",
+    "quick_resp_title": "Réponse rapide",
+    "quick_resp_desc": "Notre équipe d'exportation répond généralement aux demandes dans les 24 heures ouvrables.",
+    "form_title": "Envoyez-nous un message",
+    "field_name": "Nom complet",
+    "ph_name": "Entrez votre nom",
+    "field_email": "Adresse e-mail",
+    "ph_email": "Entrez votre adresse e-mail",
+    "field_company": "Nom de l'entreprise",
+    "ph_company": "Entrez le nom de votre entreprise",
+    "field_phone": "Numéro de téléphone",
+    "ph_phone": "Entrez le numéro de téléphone",
+    "field_country": "Pays",
+    "ph_country": "Sélectionnez votre pays",
+    "field_product": "Intérêt pour le produit",
+    "ph_product": "Sélectionnez un produit",
+    "field_message": "Message",
+    "ph_message": "Entrez votre message",
+    "btn_submit": "Envoyer le message",
+    "btn_sending": "Envoi...",
+    "alert_success": "Message envoyé avec succès !",
+    "products": {
+      "fruits": "Fruits frais",
+      "veg": "Légumes",
+      "medical": "Fournitures médicales",
+      "spices": "Épices et herbes"
+    },
+    "errors": {
+      "name_min": "Le nom doit comporter au moins 2 caractères",
+      "email_invalid": "Veuillez entrer une adresse e-mail valide",
+      "phone_invalid": "Numéro de téléphone invalide",
+      "country_req": "Veuillez sélectionner un pays",
+      "message_min": "Le message doit comporter au moins 10 caractères"
+    }
+  
+},
+ 
+  "about": {
+    "header_title": "À propos de",
+    "header_subtitle": "Votre partenaire de confiance pour relier la qualité égyptienne aux marchés mondiaux.",
+    "who_we_are_title": "Qui sommes-nous",
+    "mission_title": "Notre Mission",
+    "mission_desc": "Notre mission est de fournir des produits sûrs et de haute qualité qui répondent aux normes internationales tout en garantissant l'efficacité, la transparence et la fiabilité tout au long du processus d'exportation. Nous visons à soutenir nos partenaires en assurant un approvisionnement constant, une manipulation soigneuse des produits et des solutions logistiques professionnelles qui apportent une réelle valeur ajoutée à leurs entreprises.",
+    "company_title": "HD GROUP for Export",
+    "company_desc": "HD GROUP for Export est une société d'exportation égyptienne fournissant une gamme diversifiée de produits de haute qualité aux marchés internationaux. Notre portefeuille comprend des légumes frais, des fruits frais, des fournitures médicales et des produits alimentaires de base. Nous nous concentrons sur la fourniture de solutions d'exportation fiables qui répondent aux normes de qualité mondiales tout en établissant des partenariats à long terme.",
+    "vision_title": "Notre Vision",
+    "vision_desc": "Notre vision est de devenir un partenaire d'exportation mondial de confiance, reconnu pour sa qualité, son intégrité et sa durabilité. Nous nous efforçons d'élargir notre portée commerciale, de diversifier nos offres de produits et d'améliorer continuellement nos processus pour répondre aux besoins changeants des marchés internationaux et contribuer au commerce mondial durable.",
+    "story_title": "Notre Histoire",
+    "story_p1": "HD GROUP a été créé avec une vision claire : combler le fossé entre les produits de qualité égyptiens et les marchés internationaux.",
+    "story_p2": "Notre voyage a commencé dans le secteur agricole, en exportant des fruits et légumes frais égyptiens de première qualité. Profitant du climat idéal de l'Égypte, nous nous sommes rapidement imposés comme un fournisseur fiable.",
+    "story_p3": "Reconnaissant la demande mondiale croissante de fournitures médicales, nous avons étendu nos opérations pour inclure des équipements médicaux certifiés.",
+    "story_p4": "Aujourd'hui, HD GROUP témoigne de l'excellence égyptienne dans le commerce international. Nos installations de pointe et nos processus de contrôle qualité rigoureux garantissent la satisfaction.",
+    "team_title": "Notre Équipe de Direction",
+    "team_subtitle": "Rencontrez les professionnels expérimentés qui mènent HD GROUP vers l'excellence",
+    "team_member_role": "Fondateur & PDG",
+    "team_member_desc": "Plus de 20 ans d'expérience dans l'exportation internationale.",
+    "markets_title": "Marchés d'Exportation Mondiaux",
+    "markets_subtitle": "Nous servons fièrement les marchés internationaux sur plusieurs continents",
+    "countries": {
+      "south_africa": "Afrique du Sud",
+      "france": "France",
+      "russia": "Russie",
+      "uk": "Royaume-Uni",
+      "china": "Chine"
+    }
+  }
+,
   "home": {
     "chooseUs": "Pourquoi choisir",
     "contact": "Contactez-nous",
@@ -38,6 +392,7 @@
       "description": "Des légumes frais de la ferme récoltés à maturité optimale et livrés sur les marchés internationaux.",
       "title": "Légumes frais"
     },
+    "btn": "Voir les produits",
     "welcome": "Bienvenue à",
     "welcomeText": "est une entreprise d'exportation égyptienne de premier plan avec des années d'expérience dans la livraison de fruits frais, de légumes et de fournitures médicales de qualité supérieure sur les marchés internationaux. Nous sommes fiers de notre qualité, de notre fiabilité et de la satisfaction de nos clients.\nNotre engagement envers l'excellence et un contrôle qualité strict garantissent que chaque expédition respecte les normes internationales les plus élevées. Partenaire avec nous pour une expérience d'exportation sans faille."
   }

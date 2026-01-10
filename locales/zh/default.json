@@ -1,4 +1,355 @@
 {
+ 
+  
+  "product_details": {
+    "ui": {
+      "back": "返回",
+      "specifications": "规格参数",
+      "label_origin": "产地",
+      "label_season": "季节",
+      "label_varieties": "品种",
+      "label_packaging": "包装",
+      "packaging_title": "包装与出口信息",
+      "btn_request": "索取信息",
+      "contact_hint": "联系我们获取价格、库存和运输详情",
+      "why_title": "为什么选择我们的",
+      "season_value": "5月 - 9月"
+    },
+    "why_us": {
+      "origin_title": "优质产地",
+      "origin_text": "直接采购自埃及最好的农场，确保纯正口感和卓越品质。",
+      "quality_title": "质量保证",
+      "quality_text": "从收获到包装的严格质量控制流程，符合国际标准。",
+      "export_title": "出口包装",
+      "export_text": "专业的出口级包装，旨在运输过程中保持新鲜度。"
+    },
+    "items": {
+      "orange": {
+        "name": "新鲜橙子",
+        "desc": "优质埃及橙子，口感极佳，保质期长。",
+        "origin": "埃及",
+        "varieties": "瓦伦西亚, 脐橙, 巴拉迪",
+        "packaging": "15公斤 敞口箱 / 伸缩纸箱",
+        "details": "我们的橙子经过手工采摘和仔细分拣，以确保最大的新鲜度。"
+      },
+      "banana": {
+        "name": "新鲜香蕉",
+        "desc": "优质埃及香蕉，质地细腻，口感香甜。",
+        "origin": "埃及",
+        "varieties": "威廉姆斯, 巨型奈恩",
+        "packaging": "13公斤 / 18公斤 纸箱",
+        "details": "生长在营养丰富的土壤中，非常适合出口市场。"
+      },
+      "mango": {
+        "name": "新鲜芒果",
+        "desc": "异国情调的埃及芒果，以其独特的香气和甜味而闻名。",
+        "origin": "埃及",
+        "varieties": "Zebda, Kent, Keitt, Naomi",
+        "packaging": "5公斤 敞口箱",
+        "details": "在完美的成熟阶段采摘，确保安全到达。"
+      },
+      "pomegranate": {
+        "name": "新鲜石榴",
+        "desc": "红宝石般的埃及石榴，富含抗氧化剂。",
+        "origin": "埃及",
+        "varieties": "Wonderful, Baladi",
+        "packaging": "4.5公斤 敞口箱",
+        "details": "以深红色的籽粒和高出汁率而闻名。"
+      },
+      "grapes": {
+        "name": "新鲜葡萄",
+        "desc": "脆甜的埃及葡萄。",
+        "origin": "埃及",
+        "varieties": "火焰无核, 克里姆森, 汤普森",
+        "packaging": "5公斤 / 9公斤 手提袋或小篮",
+        "details": "提供无籽品种，非常适合鲜食。"
+      },
+      "strawberry": {
+        "name": "新鲜草莓",
+        "desc": "香甜芳香的草莓。",
+        "origin": "埃及",
+        "varieties": "Festival, Fortuna",
+        "packaging": "2.5公斤 纸箱 (10小篮)",
+        "details": "精细处理以保持质地和外观。"
+      },
+      "tangerine": {
+        "name": "新鲜橘子",
+        "desc": "易剥皮的柑橘，风味独特。",
+        "origin": "埃及",
+        "varieties": "茂谷柑, 克莱门氏小柑橘",
+        "packaging": "10公斤 敞口箱",
+        "details": "多汁且色泽鲜艳，在冬季市场很受欢迎。"
+      },
+      "apple": {
+        "name": "新鲜苹果",
+        "desc": "清脆的埃及苹果。",
+        "origin": "埃及",
+        "varieties": "安娜",
+        "packaging": "标准苹果箱",
+        "details": "本地种植品种，以早季上市而闻名。"
+      },
+      "sweetPotato": {
+        "name": "红薯",
+        "desc": "营养丰富且果肉甘甜的红薯。",
+        "origin": "埃及",
+        "varieties": "博雷加德",
+        "packaging": "6公斤 箱",
+        "details": "经过固化处理以延长保质期并增加甜度。"
+      },
+      "potatoes": {
+        "name": "新鲜土豆",
+        "desc": "用于烹饪和加工的高品质土豆。",
+        "origin": "埃及",
+        "varieties": "Spunta, Kara",
+        "packaging": "10公斤 / 25公斤 网袋",
+        "details": "干净、清洗或刷过，适合长途运输。"
+      },
+      "tomatoes": {
+        "name": "新鲜番茄",
+        "desc": "用于沙拉或烹饪的红熟番茄。",
+        "origin": "埃及",
+        "varieties": "樱桃番茄, 圆番茄",
+        "packaging": "5公斤 纸箱",
+        "details": "质地坚实，确保出口期间的耐用性。"
+      },
+      "unions": {
+        "name": "新鲜洋葱",
+        "desc": "味道浓郁的金洋葱和红洋葱。",
+        "origin": "埃及",
+        "varieties": "金洋葱, 红洋葱",
+        "packaging": "10公斤 / 25公斤 网袋",
+        "details": "表皮干燥，完全固化，适合长期储存。"
+      },
+      "tablets": {
+        "name": "医疗片剂",
+        "desc": "按照GMP标准生产的医药级片剂。",
+        "origin": "埃及",
+        "varieties": "止痛药, 抗生素",
+        "packaging": "泡罩包装 / 盒装",
+        "details": "经过认证的医疗产品，确保患者安全。"
+      },
+      "IV": {
+        "name": "输液器",
+        "desc": "医院使用的无菌输液器。",
+        "origin": "埃及",
+        "varieties": "标准型, 流量调节型",
+        "packaging": "无菌袋",
+        "details": "一次性使用，无热原，无菌。"
+      },
+      "Examination-gloves": {
+        "name": "检查手套",
+        "desc": "用于医疗检查的乳胶/丁腈手套。",
+        "origin": "埃及",
+        "varieties": "有粉, 无粉",
+        "packaging": "100只/盒",
+        "details": "高触觉敏感度和屏障保护。"
+      },
+      "Examination-gloves-2": {
+        "name": "检查手套 2",
+        "desc": "替代材料检查手套。",
+        "origin": "埃及",
+        "varieties": "乙烯基 (Vinyl)",
+        "packaging": "100只/盒",
+        "details": "一般任务的经济型解决方案。"
+      },
+      "Sterile-gloves": {
+        "name": "无菌手套",
+        "desc": "外科级无菌手套。",
+        "origin": "埃及",
+        "varieties": "手术尺寸 6-9",
+        "packaging": "独立无菌副",
+        "details": "为外科手术提供最大程度的保护。"
+      },
+      "Syringes": {
+        "name": "注射器",
+        "desc": "一次性医用注射器。",
+        "origin": "埃及",
+        "varieties": "3毫升, 5毫升, 10毫升",
+        "packaging": "泡罩包装",
+        "details": "推杆移动顺畅，针筒清晰。"
+      },
+      "Insulin-syringes": {
+        "name": "胰岛素注射器",
+        "desc": "用于输送胰岛素的细针注射器。",
+        "origin": "埃及",
+        "varieties": "1毫升 / 0.5毫升",
+        "packaging": "塑料袋 / 泡罩",
+        "details": "超细针头，注射舒适。"
+      },
+      "Orthopedic-splints": {
+        "name": "骨科钢板",
+        "desc": "用于骨固定的钛/钢板。",
+        "origin": "埃及",
+        "varieties": "各种尺寸",
+        "packaging": "无菌包",
+        "details": "高强度和生物相容性。"
+      },
+      "Capsules": {
+        "name": "胶囊",
+        "desc": "空心或填充硬明胶胶囊。",
+        "origin": "埃及",
+        "varieties": "0号, 00号, 1号",
+        "packaging": "纸箱",
+        "details": "适用于药物制剂。"
+      },
+      "Prosthetic-joint": {
+        "name": "人工关节",
+        "desc": "人工关节置换物。",
+        "origin": "埃及",
+        "varieties": "髋关节, 膝关节",
+        "packaging": "专用医疗箱",
+        "details": "专为耐用性和灵活性而设计。"
+      },
+      "Peas": {
+        "name": "干豌豆",
+        "desc": "优质干豌豆。",
+        "origin": "埃及",
+        "varieties": "绿豌豆, 黄豌豆",
+        "packaging": "25公斤 PP袋",
+        "details": "经过清洁和筛选，纯度高。"
+      },
+      "Lentils": {
+        "name": "扁豆",
+        "desc": "营养丰富的干扁豆。",
+        "origin": "埃及",
+        "varieties": "红扁豆, 褐扁豆",
+        "packaging": "25公斤 PP袋",
+        "details": "富含蛋白质的主食。"
+      },
+      "Beans": {
+        "name": "干芸豆",
+        "desc": "用于罐头或烹饪的优质干芸豆。",
+        "origin": "埃及",
+        "varieties": "白芸豆",
+        "packaging": "25公斤 PP袋",
+        "details": "精选出口品质。"
+      }
+    }
+  }
+,
+  "products_page": {
+    "title_main": "我们的",
+    "title_highlight": "产品",
+    "status_available": "有货",
+    "status_unavailable": "缺货",
+    "btn_details": "查看详情",
+    "categories": {
+      "fresh-vegetables": "新鲜蔬菜",
+      "fresh-fruits": "新鲜水果",
+      "medical-supplies": "医疗用品",
+      "staple-foods": "主食产品"
+    }
+  }
+,
+  "navigation": {
+    "home": "首页",
+    "about": "关于我们",
+    "products": "产品中心",
+    "contact": "联系我们",
+    "lang_en": "英语",
+    "lang_zh": "中文",
+    "lang_fr": "法语",
+    "lang_ru": "俄语"
+  },
+
+  "footer": {
+    "description": "领先的埃及出口公司，专门向全球市场提供新鲜农产品和医疗用品。",
+    "follow_us": "在社交媒体上关注我们",
+    "links_title": "快速链接",
+    "link_home": "首页",
+    "link_products": "产品",
+    "link_about": "关于我们",
+    "products_title": "我们的产品",
+    "prod_fruits": "新鲜水果",
+    "prod_veg": "新鲜蔬菜",
+    "prod_medical": "医疗用品",
+    "prod_dry": "主食和干货",
+    "contact_title": "联系我们",
+    "label_phone": "电话：",
+    "label_email": "电子邮件：",
+    "label_location": "地址：",
+    "location_value": "埃及开罗 - 出口中心。",
+    "label_hours": "工作时间",
+    "hours_days": "周六 - 周四",
+    "copyright": "© 2025 版权所有"
+  },
+  "contact": {
+    "header_title": "联系我们",
+    "header_desc": "我们为国际合作伙伴提供优质的埃及产品和可靠的出口解决方案。欢迎联系我们洽谈咨询、报价或长期合作。",
+    "info_tag": "取得联系",
+    "info_title": "无缝沟通，全球影响。",
+    "info_desc": "我们随时为您提供帮助，通过优质的埃及出口产品拓展您的业务。",
+    "label_email": "电子邮件",
+    "label_phone": "电话",
+    "label_location": "地点",
+    "location_value": "埃及开罗 - 出口中心。",
+    "label_hours": "工作时间",
+    "hours_days": "周六 - 周四",
+    "quick_resp_title": "快速响应",
+    "quick_resp_desc": "我们的出口团队通常会在 24 个工作小时内回复咨询。",
+    "form_title": "给我们留言",
+    "field_name": "全名",
+    "ph_name": "输入您的姓名",
+    "field_email": "电子邮件地址",
+    "ph_email": "输入您的电子邮件地址",
+    "field_company": "公司名称",
+    "ph_company": "输入您的公司名称",
+    "field_phone": "电话号码",
+    "ph_phone": "输入电话号码",
+    "field_country": "国家",
+    "ph_country": "选择您的国家",
+    "field_product": "感兴趣的产品",
+    "ph_product": "选择产品",
+    "field_message": "留言",
+    "ph_message": "输入您的留言",
+    "btn_submit": "发送留言",
+    "btn_sending": "发送中...",
+    "alert_success": "留言发送成功！",
+    "products": {
+      "fruits": "新鲜水果",
+      "veg": "蔬菜",
+      "medical": "医疗用品",
+      "spices": "香料和草药"
+    },
+    "errors": {
+      "name_min": "姓名必须至少包含 2 个字符",
+      "email_invalid": "请输入有效的电子邮件地址",
+      "phone_invalid": "无效的电话号码",
+      "country_req": "请选择一个国家",
+      "message_min": "留言必须至少包含 10 个字符"
+    }
+  
+},
+  "about": {
+    "header_title": "关于我们",
+    "header_subtitle": "您值得信赖的合作伙伴，将埃及品质与全球市场紧密相连。",
+    "who_we_are_title": "我们是谁",
+    "mission_title": "我们的使命",
+    "mission_desc": "我们的使命是提供符合国际标准的安全、优质产品，同时确保整个出口过程的效率、透明度和可靠性。我们的目标是通过提供稳定的供应、细致的产品处理和专业的物流解决方案来支持我们的合作伙伴，从而为他们的业务增加真正的价值。",
+    "company_title": "HD GROUP for Export",
+    "company_desc": "HD GROUP for Export 是一家埃及出口公司，为国际市场提供各种高质量产品。我们的产品组合包括新鲜蔬菜、新鲜水果、医疗用品和主食产品。我们专注于提供符合全球质量标准的可靠出口解决方案，同时建立长期的合作伙伴关系。",
+    "vision_title": "我们的愿景",
+    "vision_desc": "我们的愿景是成为以质量、诚信和可持续性著称的值得信赖的全球出口合作伙伴。我们致力于扩大市场覆盖范围，丰富产品种类，并不断改进我们的流程，以满足国际市场不断变化的需求，并为可持续的全球贸易做出贡献。",
+    "story_title": "我们的故事",
+    "story_p1": "HD GROUP 成立的愿景很明确：弥合埃及优质产品与国际市场之间的差距。",
+    "story_p2": "我们的旅程始于农业领域，出口优质的埃及新鲜水果和蔬菜。利用埃及理想的气候和丰富的农业传统，我们迅速确立了自己作为优质农产品可靠供应商的地位。",
+    "story_p3": "认识到全球对医疗用品日益增长的需求，我们扩大了业务范围，包括经过认证的医疗设备和用品。",
+    "story_p4": "今天，HD GROUP 见证了埃及在国际贸易中的卓越表现。我们先进的设施和严格的质量控制流程确保我们出口的每一件产品都符合国际标准。",
+    "team_title": "我们的领导团队",
+    "team_subtitle": "认识带领 HD GROUP 走向卓越的资深专业人士",
+    "team_member_role": "创始人兼首席执行官",
+    "team_member_desc": "在国际出口领域拥有超过 20 年的经验。",
+    "markets_title": "全球出口市场",
+    "markets_subtitle": "我们自豪地服务于跨越多个大洲的国际市场",
+    "countries": {
+      "south_africa": "南非",
+      "france": "法国",
+      "russia": "俄罗斯",
+      "uk": "英国",
+      "china": "中国"
+    }
+  }
+,
   "home": {
     "chooseUs": "为什么选择",
     "contact": "联系我们",
@@ -38,6 +389,7 @@
       "description": "在最佳成熟期收获的农场新鲜蔬菜，送往国际市场。",
       "title": "新鲜蔬菜"
     },
+    "btn": "查看产品",
     "welcome": "欢迎来到",
     "welcomeText": "是一家领先的埃及出口公司，拥有多年向国际市场提供优质新鲜水果、蔬菜和医疗用品的经验。我们以质量、可靠性和客户满意度为荣。\n我们对卓越的承诺和严格的质量控制确保每一批货物都符合最高的国际标准。与我们合作，享受无缝的出口体验。"
   }

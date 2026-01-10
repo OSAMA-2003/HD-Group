@@ -244,7 +244,7 @@ export default function HomePage() {
                   </p>
 
                   <Link href={product.link} className="w-full">
-                    <Button text='View Products' />
+                    <Button text={t('btn')} />
                   </Link>
                 </div>
               </motion.div>

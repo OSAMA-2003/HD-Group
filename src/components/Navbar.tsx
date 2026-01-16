@@ -17,8 +17,9 @@ export default function Navbar() {
   // 1. Translated Languages Array
   const languages = [
     { code: 'En', name: t('lang_en'), flag: '/flags/us.svg' },
-    { code: 'Zh', name: t('lang_zh'), flag: '/flags/cn.svg' },
     { code: 'Fr', name: t('lang_fr'),  flag: '/flags/fr.png' },
+    { code: 'De', name: t('lang_de'),  flag: '/flags/gr.svg' },
+    { code: 'Zh', name: t('lang_zh'), flag: '/flags/cn.svg' },
     { code: 'Ru', name: t('lang_ru'), flag: '/flags/ru.png' },
   ];
 

@@ -1,0 +1,402 @@
+{
+  "product_details": {
+    "ui": {
+      "back": "Zurück",
+      "specifications": "Spezifikationen",
+      "label_origin": "Herkunft",
+      "label_season": "Saison",
+      "label_varieties": "Sorten",
+      "label_packaging": "Verpackung",
+      "packaging_title": "Verpackungs- & Exportinformationen",
+      "btn_request": "Information anfordern",
+      "contact_hint": "Kontaktieren Sie uns für Preise, Verfügbarkeit und Versanddetails",
+      "why_title": "Warum Sie sich für unsere",
+      "season_value": "Mai – September"
+    },
+    "why_us": {
+      "origin_title": "Erstklassige Herkunft",
+      "origin_text": "Direkt von den besten Farmen Ägyptens bezogen – für authentischen Geschmack und höchste Qualität.",
+      "quality_title": "Garantierte Qualität",
+      "quality_text": "Strenge Qualitätskontrollen von der Ernte bis zur Verpackung gemäß internationalen Standards.",
+      "export_title": "Exportverpackung",
+      "export_text": "Professionelle Exportverpackung zur Erhaltung der Frische während des Transports."
+    },
+    "items": {
+      "orange": {
+        "name": "Frische Orangen",
+        "desc": "Premium-Orangen aus Ägypten mit ausgezeichnetem Geschmack und langer Haltbarkeit.",
+        "origin": "Ägypten",
+        "varieties": "Valencia, Navel, Baladi",
+        "packaging": "15 kg Open-Top / Teleskopkarton",
+        "details": "Unsere Orangen werden handverlesen und sorgfältig sortiert, um maximale Frische zu gewährleisten."
+      },
+      "banana": {
+        "name": "Frische Bananen",
+        "desc": "Premium-Bananen aus Ägypten mit cremiger Textur und süßem Geschmack.",
+        "origin": "Ägypten",
+        "varieties": "Williams, Grand Nain",
+        "packaging": "13 kg / 18 kg Karton",
+        "details": "Angebaut in nährstoffreichem Boden – ideal für Exportmärkte."
+      },
+      "mango": {
+        "name": "Frische Mangos",
+        "desc": "Exotische ägyptische Mangos mit einzigartigem Aroma und Süße.",
+        "origin": "Ägypten",
+        "varieties": "Zebda, Kent, Keitt, Naomi",
+        "packaging": "5 kg Open-Top-Karton",
+        "details": "Zum optimalen Reifezeitpunkt geerntet, um eine sichere Lieferung zu gewährleisten."
+      },
+      "pomegranate": {
+        "name": "Frische Granatäpfel",
+        "desc": "Rubinrote ägyptische Granatäpfel reich an Antioxidantien.",
+        "origin": "Ägypten",
+        "varieties": "Wonderful, Baladi",
+        "packaging": "4,5 kg Open-Top-Karton",
+        "details": "Bekannt für tiefrote Kerne und hohen Saftgehalt."
+      },
+      "grapes": {
+        "name": "Frische Trauben",
+        "desc": "Knackige und süße ägyptische Trauben.",
+        "origin": "Ägypten",
+        "varieties": "Flame, Crimson, Thompson",
+        "packaging": "5 kg / 9 kg Tragetaschen oder Schalen",
+        "details": "Kernlose Sorten – ideal für den Frischverzehr."
+      },
+      "strawberry": {
+        "name": "Frische Erdbeeren",
+        "desc": "Süße und aromatische Erdbeeren.",
+        "origin": "Ägypten",
+        "varieties": "Festival, Fortuna",
+        "packaging": "2,5 kg Karton (10 Schalen)",
+        "details": "Schonende Handhabung zur Erhaltung von Textur und Aussehen."
+      },
+      "tangerine": {
+        "name": "Frische Mandarinen",
+        "desc": "Leicht schälbare Zitrusfrüchte mit intensivem Geschmack.",
+        "origin": "Ägypten",
+        "varieties": "Murcott, Clementine",
+        "packaging": "10 kg Open-Top",
+        "details": "Saftig mit leuchtender Farbe – sehr beliebt auf Wintermärkten."
+      },
+      "apple": {
+        "name": "Frische Äpfel",
+        "desc": "Knackige ägyptische Äpfel.",
+        "origin": "Ägypten",
+        "varieties": "Anna",
+        "packaging": "Standard-Apfelkarton",
+        "details": "Lokal angebaute Sorte mit früher Verfügbarkeit."
+      },
+      "sweetPotato": {
+        "name": "Süßkartoffeln",
+        "desc": "Nährstoffreiche Süßkartoffeln mit süßem Fruchtfleisch.",
+        "origin": "Ägypten",
+        "varieties": "Beauregard",
+        "packaging": "6 kg Karton",
+        "details": "Gereift zur Verlängerung der Haltbarkeit und Steigerung der Süße."
+      },
+      "potatoes": {
+        "name": "Frische Kartoffeln",
+        "desc": "Hochwertige Kartoffeln zum Kochen und zur Verarbeitung.",
+        "origin": "Ägypten",
+        "varieties": "Spunta, Kara",
+        "packaging": "10 kg / 25 kg Netzsäcke",
+        "details": "Sauber, gewaschen oder gebürstet – ideal für langen Transport."
+      },
+      "tomatoes": {
+        "name": "Frische Tomaten",
+        "desc": "Reife rote Tomaten für Salate oder zum Kochen.",
+        "origin": "Ägypten",
+        "varieties": "Cherry, Rund",
+        "packaging": "5 kg Karton",
+        "details": "Feste Struktur für sicheren Export."
+      },
+      "unions": {
+        "name": "Frische Zwiebeln",
+        "desc": "Goldene und rote Zwiebeln mit kräftigem Geschmack.",
+        "origin": "Ägypten",
+        "varieties": "Gold, Rot",
+        "packaging": "10 kg / 25 kg Netzsäcke",
+        "details": "Gut getrocknet für lange Lagerfähigkeit."
+      },
+      "tablets": {
+        "name": "Medizinische Tabletten",
+        "desc": "Pharmazeutische Tabletten gemäß GMP-Standards.",
+        "origin": "Ägypten",
+        "varieties": "Schmerzmittel, Antibiotika",
+        "packaging": "Blister / Karton",
+        "details": "Zertifizierte Medizinprodukte für höchste Patientensicherheit."
+      },
+      "IV": {
+        "name": "IV-Infusionsset",
+        "desc": "Sterile Infusionssysteme für den Krankenhausgebrauch.",
+        "origin": "Ägypten",
+        "varieties": "Standard, Durchflussregler",
+        "packaging": "Steriler Beutel",
+        "details": "Einwegprodukt, pyrogenfrei und steril."
+      },
+      "Examination-gloves": {
+        "name": "Untersuchungshandschuhe",
+        "desc": "Latex-/Nitrilhandschuhe für medizinische Untersuchungen.",
+        "origin": "Ägypten",
+        "varieties": "Gepudert, puderfrei",
+        "packaging": "Box mit 100 Stück",
+        "details": "Hohe Tastempfindlichkeit und zuverlässiger Schutz."
+      },
+      "Examination-gloves-2": {
+        "name": "Untersuchungshandschuhe 2",
+        "desc": "Untersuchungshandschuhe aus alternativem Material.",
+        "origin": "Ägypten",
+        "varieties": "Vinyl",
+        "packaging": "Box mit 100 Stück",
+        "details": "Kosteneffiziente Lösung für allgemeine Anwendungen."
+      },
+      "Sterile-gloves": {
+        "name": "Sterile Handschuhe",
+        "desc": "Sterile OP-Handschuhe in chirurgischer Qualität.",
+        "origin": "Ägypten",
+        "varieties": "OP-Größen 6–9",
+        "packaging": "Einzeln steril verpackt",
+        "details": "Maximaler Schutz für chirurgische Eingriffe."
+      },
+      "Syringes": {
+        "name": "Spritzen",
+        "desc": "Einweg-Medizinspritzen.",
+        "origin": "Ägypten",
+        "varieties": "3 ml, 5 ml, 10 ml",
+        "packaging": "Blisterverpackung",
+        "details": "Gleichmäßiger Kolbenlauf und klarer Zylinder."
+      },
+      "Insulin-syringes": {
+        "name": "Insulinspritzen",
+        "desc": "Feinnadel-Spritzen zur Insulinverabreichung.",
+        "origin": "Ägypten",
+        "varieties": "1 ml / 0,5 ml",
+        "packaging": "Polybeutel / Blister",
+        "details": "Ultradünne Nadel für schmerzarme Injektionen."
+      },
+      "Orthopedic-splints": {
+        "name": "Orthopädische Platten",
+        "desc": "Titan-/Stahlplatten zur Knochenfixierung.",
+        "origin": "Ägypten",
+        "varieties": "Verschiedene Größen",
+        "packaging": "Sterile Verpackung",
+        "details": "Hohe Festigkeit und Biokompatibilität."
+      },
+      "Capsules": {
+        "name": "Kapseln",
+        "desc": "Leere oder gefüllte Hartgelatinekapseln.",
+        "origin": "Ägypten",
+        "varieties": "Größe 0, 00, 1",
+        "packaging": "Karton",
+        "details": "Geeignet für pharmazeutische Formulierungen."
+      },
+      "Prosthetic-joint": {
+        "name": "Prothetisches Gelenk",
+        "desc": "Künstliche Gelenkersatzsysteme.",
+        "origin": "Ägypten",
+        "varieties": "Hüfte, Knie",
+        "packaging": "Spezielle Medizinbox",
+        "details": "Für Langlebigkeit und Mobilität entwickelt."
+      },
+      "Peas": {
+        "name": "Trockene Erbsen",
+        "desc": "Hochwertige getrocknete Erbsen.",
+        "origin": "Ägypten",
+        "varieties": "Grün, Gelb",
+        "packaging": "25 kg PP-Säcke",
+        "details": "Gereinigt und sortiert für höchste Reinheit."
+      },
+      "Lentils": {
+        "name": "Linsen",
+        "desc": "Nährstoffreiche getrocknete Linsen.",
+        "origin": "Ägypten",
+        "varieties": "Rot, Braun",
+        "packaging": "25 kg PP-Säcke",
+        "details": "Grundnahrungsmittel mit hohem Proteingehalt."
+      },
+      "Beans": {
+        "name": "Getrocknete Bohnen",
+        "desc": "Premium-Bohnen zum Kochen oder zur Weiterverarbeitung.",
+        "origin": "Ägypten",
+        "varieties": "Weiße Kidneybohnen",
+        "packaging": "25 kg PP-Säcke",
+        "details": "Hochwertige Auswahl für den Export."
+      }
+    }
+  },
+
+  "products_page": {
+    "title_main": "Unsere",
+    "title_highlight": "Produkte",
+    "status_available": "Verfügbar",
+    "status_unavailable": "Nicht verfügbar",
+    "btn_details": "Details anzeigen",
+    "categories": {
+      "fresh-vegetables": "Frisches Gemüse",
+      "fresh-fruits": "Frische Früchte",
+      "medical-supplies": "Medizinische Produkte",
+      "staple-foods": "Grundnahrungsmittel"
+    }
+  },
+
+  "navigation": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "products": "Produkte",
+    "contact": "Kontakt",
+    "lang_en": "English",
+    "lang_zh": "Chinesisch",
+    "lang_fr": "Französisch",
+    "lang_ru": "Russisch",
+    "lang_de": "Deutsch"
+  },
+
+  "footer": {
+    "description": "Führendes ägyptisches Exportunternehmen, spezialisiert auf Frischwaren und medizinische Produkte für internationale Märkte.",
+    "follow_us": "Folgen Sie uns in sozialen Netzwerken",
+    "links_title": "Schnellzugriffe",
+    "link_home": "Startseite",
+    "link_products": "Produkte",
+    "link_about": "Über uns",
+    "products_title": "Unsere Produkte",
+    "prod_fruits": "Frische Früchte",
+    "prod_veg": "Frisches Gemüse",
+    "prod_medical": "Medizinische Produkte",
+    "prod_dry": "Grundnahrungsmittel & Trockenwaren",
+    "contact_title": "Kontakt",
+    "label_phone": "Telefon:",
+    "label_email": "E-Mail:",
+    "label_location": "Standort:",
+    "location_value": "Kairo, Ägypten – Export City Center.",
+    "label_hours": "Arbeitszeiten",
+    "hours_days": "Samstag – Donnerstag",
+    "copyright": "© 2025 Alle Rechte vorbehalten"
+  },
+
+  
+  "contact": {
+    "header_title": "Lassen Sie uns in Kontakt treten",
+    "header_desc": "Wir unterstützen internationale Partner mit hochwertigen ägyptischen Produkten und zuverlässigen Exportlösungen. Kontaktieren Sie uns für Anfragen, Angebote oder eine langfristige Zusammenarbeit.",
+    "info_tag": "Kontakt aufnehmen",
+    "info_title": "Nahtlose Kommunikation, globale Wirkung.",
+    "info_desc": "Wir sind jederzeit für Sie da, um Ihr Geschäft mit hochwertigen ägyptischen Exporten zu unterstützen.",
+    "label_email": "E-Mail",
+    "label_phone": "Telefon",
+    "label_location": "Standort",
+    "location_value": "Kairo, Ägypten – Export City Center.",
+    "label_hours": "Arbeitszeiten",
+    "hours_days": "Samstag – Donnerstag",
+    "quick_resp_title": "Schnelle Antwort",
+    "quick_resp_desc": "Unser Exportteam antwortet in der Regel innerhalb von 24 Geschäftsstunden auf Anfragen.",
+    "form_title": "Senden Sie uns eine Nachricht",
+    "field_name": "Vollständiger Name",
+    "ph_name": "Geben Sie Ihren Namen ein",
+    "field_email": "E-Mail-Adresse",
+    "ph_email": "Geben Sie Ihre E-Mail-Adresse ein",
+    "field_company": "Firmenname",
+    "ph_company": "Geben Sie Ihren Firmennamen ein",
+    "field_phone": "Telefonnummer",
+    "ph_phone": "Telefonnummer eingeben",
+    "field_country": "Land",
+    "ph_country": "Wählen Sie Ihr Land",
+    "field_product": "Produktinteresse",
+    "ph_product": "Produkt auswählen",
+    "field_message": "Nachricht",
+    "ph_message": "Geben Sie Ihre Nachricht ein",
+    "btn_submit": "Nachricht senden",
+    "btn_sending": "Wird gesendet...",
+    "alert_success": "Nachricht erfolgreich gesendet!",
+    "products": {
+      "fruits": "Frische Früchte",
+      "veg": "Gemüse",
+      "medical": "Medizinische Produkte",
+      "spices": "Gewürze & Kräuter"
+    },
+    "errors": {
+      "name_min": "Der Name muss mindestens 2 Zeichen enthalten",
+      "email_invalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+      "phone_invalid": "Ungültige Telefonnummer",
+      "country_req": "Bitte wählen Sie ein Land aus",
+      "message_min": "Die Nachricht muss mindestens 10 Zeichen enthalten"
+    }
+  },
+
+  "about": {
+    "header_title": "Über uns",
+    "header_subtitle": "Ihr zuverlässiger Partner zur Verbindung ägyptischer Qualität mit globalen Märkten.",
+    "who_we_are_title": "Wer wir sind",
+    "mission_title": "Unsere Mission",
+    "mission_desc": "Unsere Mission ist es, sichere und qualitativ hochwertige Produkte zu liefern, die internationalen Standards entsprechen, und dabei Effizienz, Transparenz und Zuverlässigkeit im gesamten Exportprozess zu gewährleisten. Wir unterstützen unsere Partner durch eine konstante Versorgung, sorgfältige Produkthandhabung und professionelle Logistiklösungen, die echten Mehrwert schaffen.",
+    "company_title": "HD GROUP for Export",
+    "company_desc": "HD GROUP for Export ist ein ägyptisches Exportunternehmen, das eine vielfältige Auswahl hochwertiger Produkte für internationale Märkte anbietet. Unser Portfolio umfasst frisches Gemüse, frische Früchte, medizinische Produkte und Grundnahrungsmittel. Wir konzentrieren uns auf zuverlässige Exportlösungen, die globale Qualitätsstandards erfüllen und langfristige Partnerschaften fördern.",
+    "vision_title": "Unsere Vision",
+    "vision_desc": "Unsere Vision ist es, ein vertrauenswürdiger globaler Exportpartner zu werden, der für Qualität, Integrität und Nachhaltigkeit steht. Wir streben danach, unsere Marktpräsenz zu erweitern, unser Produktportfolio zu diversifizieren und unsere Prozesse kontinuierlich zu verbessern, um den sich wandelnden Anforderungen internationaler Märkte gerecht zu werden und zu einem nachhaltigen globalen Handel beizutragen.",
+    "story_title": "Unsere Geschichte",
+    "story_p1": "HD GROUP wurde mit einer klaren Vision gegründet: die Lücke zwischen hochwertigen ägyptischen Produkten und internationalen Märkten zu schließen. Aus bescheidenen Anfängen heraus haben wir uns zu einem vertrauenswürdigen Exportpartner für Unternehmen weltweit entwickelt.",
+    "story_p2": "Unsere Reise begann im Agrarsektor mit dem Export hochwertiger ägyptischer frischer Früchte und Gemüse. Dank des idealen Klimas Ägyptens und seines reichen landwirtschaftlichen Erbes etablierten wir uns schnell als zuverlässiger Lieferant erstklassiger Produkte.",
+    "story_p3": "Angesichts der weltweit steigenden Nachfrage nach medizinischen Produkten erweiterten wir unsere Aktivitäten um zertifizierte medizinische Geräte und Verbrauchsmaterialien. Diese Diversifizierung ermöglicht es uns, Gesundheitseinrichtungen und Distributoren mit demselben Qualitätsanspruch zu bedienen.",
+    "story_p4": "Heute steht HD GROUP als Symbol für ägyptische Exzellenz im internationalen Handel. Unsere modernen Einrichtungen, strengen Qualitätskontrollen und unser erfahrenes Team stellen sicher, dass jedes exportierte Produkt internationalen Standards entspricht.",
+    "team_title": "Unser Führungsteam",
+    "team_subtitle": "Lernen Sie die erfahrenen Fachkräfte kennen, die HD GROUP zu Spitzenleistungen im internationalen Handel führen",
+    "team_member_role": "Gründer & CEO",
+    "team_member_desc": "Über 20 Jahre Erfahrung im internationalen Export.",
+    "markets_title": "Globale Exportmärkte",
+    "markets_subtitle": "Wir beliefern internationale Märkte auf mehreren Kontinenten",
+    "countries": {
+      "south_africa": "Südafrika",
+      "france": "Frankreich",
+      "russia": "Russland",
+      "uk": "Vereinigtes Königreich",
+      "china": "China"
+    }
+  },
+
+  "home": {
+    "chooseUs": "Warum wählen",
+    "contact": "Kontakt",
+    "dryGoods": {
+      "description": "Aromatische und authentische Gewürze direkt von ägyptischen Farmen in Ihre Küche.",
+      "title": "Hülsenfrüchte & Trockenwaren"
+    },
+    "exploreProducts": "Produkt ansehen",
+    "featureFour": {
+      "description": "Langjährige Exporterfahrung mit nachweislichem Erfolg.",
+      "title": "Vertrauenswürdiger Partner"
+    },
+    "featureOne": {
+      "description": "Alle Produkte erfüllen internationale Qualitätszertifizierungen und Standards.",
+      "title": "Hohe Qualitätsstandards"
+    },
+    "featureThree": {
+      "description": "Effiziente Lieferkette für pünktliche weltweite Lieferung.",
+      "title": "Zuverlässige Logistik"
+    },
+    "featureTwo": {
+      "description": "Export in Märkte in Europa, Asien, dem Nahen Osten und Afrika.",
+      "title": "Globale Reichweite"
+    },
+    "fruits": {
+      "description": "Premium-Früchte, ausgewählt nach Süße und Nährwert für den weltweiten Export.",
+      "title": "Frische Früchte"
+    },
+    "mainTitle": "Globale Handelslösungen & Export",
+    "hero": "HD GROUP for Export ist ein ägyptisches Exportunternehmen, das eine breite Palette hochwertiger Produkte anbietet\n",
+    "medical": {
+      "description": "Zertifizierte medizinische Geräte und Verbrauchsmaterialien gemäß strengen internationalen Sicherheitsstandards.",
+      "title": "Medizinische Produkte"
+    },
+    "products": "Unsere Produktkategorien",
+    "productsText": "Entdecken Sie unser Exportproduktportfolio, sorgfältig ausgewählt und für internationale Märkte vorbereitet",
+    "vegetables": {
+      "description": "Frisches Gemüse, zum optimalen Reifezeitpunkt geerntet und für internationale Märkte geliefert.",
+      "title": "Frisches Gemüse"
+    },
+    "btn": "Produkte ansehen",
+    "welcome": "Willkommen bei",
+    "welcomeText": "ist ein führendes ägyptisches Exportunternehmen mit langjähriger Erfahrung in der Lieferung hochwertiger frischer Früchte, Gemüse und medizinischer Produkte an internationale Märkte. Wir stehen für Qualität, Zuverlässigkeit und Kundenzufriedenheit.\nUnser Engagement für Exzellenz und strenge Qualitätskontrollen stellt sicher, dass jede Lieferung höchsten internationalen Standards entspricht. Arbeiten Sie mit uns zusammen für ein reibungsloses Exporterlebnis."
+  }
+}
+
+  
+  
+

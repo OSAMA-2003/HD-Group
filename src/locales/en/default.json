@@ -243,16 +243,18 @@
     }
   }
 ,
-  "navigation": {
-    "home": "Home",
-    "about": "About Us",
-    "products": "Products",
-    "contact": "Contact Us",
-    "lang_en": "English",
-    "lang_zh": "Chinese",
-    "lang_fr": "French",
-    "lang_ru": "Russian"
-  },
+ "navigation": {
+  "home": "Home",
+  "about": "About Us",
+  "products": "Products",
+  "contact": "Contact Us",
+  "lang_en": "English",
+  "lang_zh": "Chinese",
+  "lang_fr": "French",
+  "lang_ru": "Russian",
+  "lang_de": "German"
+},
+
 "footer": {
     "description": "Leading Egyptian export company specializing in fresh produce and medical supplies to global markets.",
     "follow_us": "Follow us on social media",
@@ -380,6 +382,7 @@
       "description": "Premium quality fruits selected for their sweetness and nutritional value for global export.",
       "title": "Fresh Fruits"
     },
+    "mainTitle": "Global Trade Solutions & Export",
     "hero": "HD GROUP for Export is an Egyptian export company providing a diverse range of high-quality products\n",
     "medical": {
       "description": "Certified medical equipment and supplies meeting rigorous international safety standards.",

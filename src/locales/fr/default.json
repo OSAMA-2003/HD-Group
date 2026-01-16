@@ -250,7 +250,8 @@
     "lang_en": "Anglais",
     "lang_zh": "Chinois",
     "lang_fr": "Français",
-    "lang_ru": "Russe"
+    "lang_ru": "Russe",
+    "lang_de": "Allemand"
   },
 
   "footer": {
@@ -381,6 +382,7 @@
       "description": "Fruits de qualité premium sélectionnés pour leur douceur et leur valeur nutritionnelle pour l'exportation mondiale.",
       "title": "Fruits frais"
     },
+    "mainTitle": "Solutions de commerce mondial et exportation",
     "hero": "HD GROUP for Export est une entreprise d'exportation égyptienne fournissant une gamme diversifiée de produits de haute qualité\n",
     "medical": {
       "description": "Équipement médical et fournitures certifiés répondant à des normes de sécurité internationales rigoureuses.",

@@ -142,7 +142,7 @@ export default function HomePage() {
             variants={staggerContainer} // Stagger the internal elements
           >
             <motion.p variants={fadeInUp} className="main-yellow font-medium text-lg mb-4 tracking-wide">
-              Global Trade Solutions & Export
+              {t('mainTitle')} 
             </motion.p>
 
             <motion.h1 variants={fadeInUp} className="text-2xl md:text-3xl lg:text-3xl font-bold text-white leading-tight mb-8">

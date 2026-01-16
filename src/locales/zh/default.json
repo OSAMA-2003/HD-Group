@@ -248,8 +248,11 @@
     "contact": "联系我们",
     "lang_en": "英语",
     "lang_zh": "中文",
+
     "lang_fr": "法语",
-    "lang_ru": "俄语"
+    "lang_ru": "俄语",
+    "lang_de": "德语"
+
   },
 
   "footer": {
@@ -378,6 +381,7 @@
       "description": "为全球出口精选的优质水果，以其甜美和营养价值而闻名。",
       "title": "新鲜水果"
     },
+    "mainTitle": "全球贸易解决方案与出口",
     "hero": "HD GROUP for Export 是一家埃及出口公司，提供多种高质量产品\n",
     "medical": {
       "description": "符合严格国际安全标准的认证医疗设备和用品。",

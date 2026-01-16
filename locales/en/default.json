@@ -1,0 +1,47 @@
+{
+  "about": {
+    "headings": "About"
+  },
+  "home": {
+    "chooseUs": "Why Choose",
+    "contact": "Contact Us",
+    "dryGoods": {
+      "description": "Aromatic and authentic spices sourced directly from Egyptian farms to your kitchen.",
+      "title": "Legumes & Dry Goods"
+    },
+    "exploreProducts": "View Product",
+    "featureFour": {
+      "description": "Years of export experience with a proven track record.",
+      "title": "Trusted Partner"
+    },
+    "featureOne": {
+      "description": "All products meet international quality certifications and standards.",
+      "title": "High Quality Standards"
+    },
+    "featureThree": {
+      "description": "Efficient supply chain ensuring timely delivery worldwide.",
+      "title": "Reliable Logistics"
+    },
+    "featureTwo": {
+      "description": "Exporting to markets across Europe, Asia, Middle East, and Africa.",
+      "title": "Global Reach"
+    },
+    "fruits": {
+      "description": "Premium quality fruits selected for their sweetness and nutritional value for global export.",
+      "title": "Fresh Fruits"
+    },
+    "hero": "HD GROUP for Export is an Egyptian export company providing a diverse range of high-quality products\n",
+    "medical": {
+      "description": "Certified medical equipment and supplies meeting rigorous international safety standards.",
+      "title": "Medical Supplies"
+    },
+    "products": "Our Product Categories",
+    "productsText": "Discover our range of export products, carefully selected and prepared for global markets",
+    "vegetables": {
+      "description": "Farm-fresh vegetables harvested at peak ripeness and delivered to international markets.",
+      "title": "Fresh Vegetables"
+    },
+    "welcome": "Welcome to",
+    "welcomeText": "is a leading Egyptian export company with years of experience in delivering premium fresh fruits, vegetables, and medical supplies to international markets. We pride ourselves on quality, reliability, and customer satisfaction.\nOur commitment to excellence and strict quality control ensures that every shipment meets the highest international standards. Partner with us for a seamless export experience."
+  }
+}

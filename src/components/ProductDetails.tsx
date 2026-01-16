@@ -7,6 +7,7 @@ import { ArrowLeft, Package, Globe, ShieldCheck, Box } from 'lucide-react';
 import { use } from "react";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl"; // 1. Import hook
+import Link from "next/link";
 
 // --- Animation Variants ---
 const fadeInUp = {
@@ -93,7 +94,7 @@ export default function ProductDetails({ params }: ProductPageProps) {
             <div className="aspect-square relative bg-white rounded-[2rem] overflow-hidden border border-gray-100 shadow-sm">
               <Image
                 src={product.image}
-                alt={itemT('name')} // Translated Name as Alt
+                alt={itemT('name')} 
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-500"
                 priority
@@ -148,7 +149,7 @@ export default function ProductDetails({ params }: ProductPageProps) {
               </div>
             </motion.div>
 
-            {/* Packaging & Export Info (Yellow Box) */}
+            
             <motion.div variants={fadeInUp} className="bg-[#FFF9E5] rounded-2xl p-6 mb-8">
               <h3 className="man-blue font-semibold text-lg mb-3">
                 {t('ui.packaging_title')}
@@ -160,9 +161,11 @@ export default function ProductDetails({ params }: ProductPageProps) {
 
             {/* CTA Button */}
             <motion.div variants={fadeInUp}>
+              <Link href="/contact">
               <button className="w-full bg-yellow-400 hover:bg-yellow-300 man-blue py-4 px-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 text-lg mb-3">
                 {t('ui.btn_request')}
               </button>
+              </Link>
             </motion.div>
             
             <motion.div variants={fadeInUp} className="text-center flex flex-col items-center gap-4">
